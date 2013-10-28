@@ -14,25 +14,35 @@
 
 @end
 
-@implementation LMMapViewController {
-    GMSMapView *mapView_;
+@implementation LMMapViewController
+
+- (void)viewDidLoad
+{
+    
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    [self.locationManager startUpdatingHeading];
+    [self.locationManager startUpdatingLocation];
+    
+    
+    
 }
 
-- (void)loadView
+# pragma mark - CLLocationManagerDelegate methods
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-33.86
-                                                            longitude:151.20
-                                                                 zoom:6];
-    mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
-    mapView_.myLocationEnabled = YES;
-    self.view = mapView_;
+    CLLocation *location = locations[0];
+    self.currentCoordinate = location.coordinate;
     
-    // Creates a marker in the center of the map.
-    GMSMarker *marker = [[GMSMarker alloc] init];
-    marker.position = CLLocationCoordinate2DMake(-33.86, 151.20);
-    marker.title = @"Sydney";
-    marker.snippet = @"Australia";
-    marker.map = mapView_;
+    NSLog(@"current location: (%.4f, %.4f)", self.currentCoordinate.latitude, self.currentCoordinate.longitude);
+    
+    CLLocationCoordinate2D startCoord = CLLocationCoordinate2DMake(24, 120.5);
+    MKCoordinateRegion region = [self.mapView regionThatFits:MKCoordinateRegionMakeWithDistance(startCoord, 800, 800)];
+    
+    [self.mapView setRegion:region animated:YES];
 }
+
+
 
 @end

@@ -13,7 +13,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [GMSServices provideAPIKey:@"{AIzaSyCZP0aiKv3P8VMDicZhVpZRoep-UALpID8}"];
+    [GMSServices provideAPIKey:@"AIzaSyCuDpSd2-dqGT9l_zn8-C5YIvildgO2re4"];
     return YES;
 }
 							

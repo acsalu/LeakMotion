@@ -1,1452 +1,611 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>0277BE28632549D09E549599</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>4CCEA8B09C0D40318E098038</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Pods-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>7721C27AA9C845D083829123</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Pods.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>797ACF207BC14B0C9EA8E0D5</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>90550E01181E23160011E327</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>QuartzCore.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/QuartzCore.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>90550E02181E23160011E327</key>
-		<dict>
-			<key>fileRef</key>
-			<string>90550E01181E23160011E327</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>90550E03181E28330011E327</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>AVFoundation.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/AVFoundation.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>90550E04181E28330011E327</key>
-		<dict>
-			<key>fileRef</key>
-			<string>90550E03181E28330011E327</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>90550E05181E283A0011E327</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreData.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/CoreData.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>90550E06181E283A0011E327</key>
-		<dict>
-			<key>fileRef</key>
-			<string>90550E05181E283A0011E327</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>90550E07181E28410011E327</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreLocation.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/CoreLocation.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>90550E08181E28410011E327</key>
-		<dict>
-			<key>fileRef</key>
-			<string>90550E07181E28410011E327</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>90550E09181E28470011E327</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreText.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/CoreText.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>90550E0A181E28470011E327</key>
-		<dict>
-			<key>fileRef</key>
-			<string>90550E09181E28470011E327</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>90550E0B181E284B0011E327</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>GLKit.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/GLKit.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>90550E0C181E284B0011E327</key>
-		<dict>
-			<key>fileRef</key>
-			<string>90550E0B181E284B0011E327</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>90550E0D181E28520011E327</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>ImageIO.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/ImageIO.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>90550E0E181E28520011E327</key>
-		<dict>
-			<key>fileRef</key>
-			<string>90550E0D181E28520011E327</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>90550E0F181E28580011E327</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>compiled.mach-o.dylib</string>
-			<key>name</key>
-			<string>libc++.dylib</string>
-			<key>path</key>
-			<string>usr/lib/libc++.dylib</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>90550E10181E28580011E327</key>
-		<dict>
-			<key>fileRef</key>
-			<string>90550E0F181E28580011E327</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>90550E11181E28660011E327</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>compiled.mach-o.dylib</string>
-			<key>name</key>
-			<string>libicucore.dylib</string>
-			<key>path</key>
-			<string>usr/lib/libicucore.dylib</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>90550E12181E28660011E327</key>
-		<dict>
-			<key>fileRef</key>
-			<string>90550E11181E28660011E327</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>90550E13181E286B0011E327</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>compiled.mach-o.dylib</string>
-			<key>name</key>
-			<string>libz.dylib</string>
-			<key>path</key>
-			<string>usr/lib/libz.dylib</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>90550E14181E286B0011E327</key>
-		<dict>
-			<key>fileRef</key>
-			<string>90550E13181E286B0011E327</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>90550E15181E28720011E327</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>OpenGLES.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/OpenGLES.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>90550E16181E28720011E327</key>
-		<dict>
-			<key>fileRef</key>
-			<string>90550E15181E28720011E327</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>90550E17181E28790011E327</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>SystemConfiguration.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/SystemConfiguration.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>90550E18181E28790011E327</key>
-		<dict>
-			<key>fileRef</key>
-			<string>90550E17181E28790011E327</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>90550E19181E29370011E327</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>path</key>
-			<string>GoogleMaps.framework</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>90550E1A181E29370011E327</key>
-		<dict>
-			<key>fileRef</key>
-			<string>90550E19181E29370011E327</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>90550E1B181E29610011E327</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.plug-in</string>
-			<key>name</key>
-			<string>GoogleMaps.bundle</string>
-			<key>path</key>
-			<string>GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>90550E1C181E29610011E327</key>
-		<dict>
-			<key>fileRef</key>
-			<string>90550E1B181E29610011E327</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>90550E1D181E2A0A0011E327</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>LMMapViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>90550E1E181E2A0A0011E327</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>LMMapViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>90550E1F181E2A0A0011E327</key>
-		<dict>
-			<key>fileRef</key>
-			<string>90550E1E181E2A0A0011E327</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>90E0444E181D4C5B006F3379</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>90E04460181D4C5B006F3379</string>
-				<string>90E0447F181D4C5B006F3379</string>
-				<string>90E04459181D4C5B006F3379</string>
-				<string>90E04458181D4C5B006F3379</string>
-				<string>7721C27AA9C845D083829123</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>90E0444F181D4C5B006F3379</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>CLASSPREFIX</key>
-				<string>LM</string>
-				<key>LastUpgradeCheck</key>
-				<string>0500</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>com.penser</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>90E04477181D4C5B006F3379</key>
-					<dict>
-						<key>TestTargetID</key>
-						<string>90E04456181D4C5B006F3379</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>90E04452181D4C5B006F3379</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>90E0444E181D4C5B006F3379</string>
-			<key>productRefGroup</key>
-			<string>90E04458181D4C5B006F3379</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>90E04456181D4C5B006F3379</string>
-				<string>90E04477181D4C5B006F3379</string>
-			</array>
-		</dict>
-		<key>90E04452181D4C5B006F3379</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>90E04487181D4C5B006F3379</string>
-				<string>90E04488181D4C5B006F3379</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>90E04453181D4C5B006F3379</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>90E04467181D4C5B006F3379</string>
-				<string>90E0446B181D4C5B006F3379</string>
-				<string>90550E1F181E2A0A0011E327</string>
-				<string>90E04471181D4C5B006F3379</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>90E04454181D4C5B006F3379</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>90550E18181E28790011E327</string>
-				<string>90550E16181E28720011E327</string>
-				<string>90550E14181E286B0011E327</string>
-				<string>90550E12181E28660011E327</string>
-				<string>90550E10181E28580011E327</string>
-				<string>90550E0E181E28520011E327</string>
-				<string>90550E0C181E284B0011E327</string>
-				<string>90550E0A181E28470011E327</string>
-				<string>90550E08181E28410011E327</string>
-				<string>90550E06181E283A0011E327</string>
-				<string>90550E04181E28330011E327</string>
-				<string>90550E02181E23160011E327</string>
-				<string>90E0445D181D4C5B006F3379</string>
-				<string>90E0445F181D4C5B006F3379</string>
-				<string>90550E1A181E29370011E327</string>
-				<string>90E0445B181D4C5B006F3379</string>
-				<string>CA1B6F857BBB4B8DA2EBBE6B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>90E04455181D4C5B006F3379</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>90E04473181D4C5B006F3379</string>
-				<string>90E04465181D4C5B006F3379</string>
-				<string>90E0446E181D4C5B006F3379</string>
-				<string>90550E1C181E29610011E327</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>90E04456181D4C5B006F3379</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>90E04489181D4C5B006F3379</string>
-			<key>buildPhases</key>
-			<array>
-				<string>797ACF207BC14B0C9EA8E0D5</string>
-				<string>90E04453181D4C5B006F3379</string>
-				<string>90E04454181D4C5B006F3379</string>
-				<string>90E04455181D4C5B006F3379</string>
-				<string>4CCEA8B09C0D40318E098038</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>LeakMotion</string>
-			<key>productName</key>
-			<string>LeakMotion</string>
-			<key>productReference</key>
-			<string>90E04457181D4C5B006F3379</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>90E04457181D4C5B006F3379</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>LeakMotion.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>90E04458181D4C5B006F3379</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>90E04457181D4C5B006F3379</string>
-				<string>90E04478181D4C5B006F3379</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>90E04459181D4C5B006F3379</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>90550E1B181E29610011E327</string>
-				<string>90550E19181E29370011E327</string>
-				<string>90550E17181E28790011E327</string>
-				<string>90550E15181E28720011E327</string>
-				<string>90550E13181E286B0011E327</string>
-				<string>90550E11181E28660011E327</string>
-				<string>90550E0F181E28580011E327</string>
-				<string>90550E0D181E28520011E327</string>
-				<string>90550E0B181E284B0011E327</string>
-				<string>90550E09181E28470011E327</string>
-				<string>90550E07181E28410011E327</string>
-				<string>90550E05181E283A0011E327</string>
-				<string>90550E03181E28330011E327</string>
-				<string>90550E01181E23160011E327</string>
-				<string>90E0445A181D4C5B006F3379</string>
-				<string>90E0445C181D4C5B006F3379</string>
-				<string>90E0445E181D4C5B006F3379</string>
-				<string>90E04479181D4C5B006F3379</string>
-				<string>0277BE28632549D09E549599</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>90E0445A181D4C5B006F3379</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>90E0445B181D4C5B006F3379</key>
-		<dict>
-			<key>fileRef</key>
-			<string>90E0445A181D4C5B006F3379</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>90E0445C181D4C5B006F3379</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreGraphics.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/CoreGraphics.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>90E0445D181D4C5B006F3379</key>
-		<dict>
-			<key>fileRef</key>
-			<string>90E0445C181D4C5B006F3379</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>90E0445E181D4C5B006F3379</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>UIKit.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/UIKit.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>90E0445F181D4C5B006F3379</key>
-		<dict>
-			<key>fileRef</key>
-			<string>90E0445E181D4C5B006F3379</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>90E04460181D4C5B006F3379</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>90E04469181D4C5B006F3379</string>
-				<string>90E0446A181D4C5B006F3379</string>
-				<string>90E0446C181D4C5B006F3379</string>
-				<string>90E0446F181D4C5B006F3379</string>
-				<string>90E04470181D4C5B006F3379</string>
-				<string>90550E1D181E2A0A0011E327</string>
-				<string>90550E1E181E2A0A0011E327</string>
-				<string>90E04472181D4C5B006F3379</string>
-				<string>90E04461181D4C5B006F3379</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>LeakMotion</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>90E04461181D4C5B006F3379</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>90E04462181D4C5B006F3379</string>
-				<string>90E04463181D4C5B006F3379</string>
-				<string>90E04466181D4C5B006F3379</string>
-				<string>90E04468181D4C5B006F3379</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>90E04462181D4C5B006F3379</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>LeakMotion-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>90E04463181D4C5B006F3379</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>90E04464181D4C5B006F3379</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>90E04464181D4C5B006F3379</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.strings</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>90E04465181D4C5B006F3379</key>
-		<dict>
-			<key>fileRef</key>
-			<string>90E04463181D4C5B006F3379</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>90E04466181D4C5B006F3379</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>90E04467181D4C5B006F3379</key>
-		<dict>
-			<key>fileRef</key>
-			<string>90E04466181D4C5B006F3379</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>90E04468181D4C5B006F3379</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>LeakMotion-Prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>90E04469181D4C5B006F3379</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>LMAppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>90E0446A181D4C5B006F3379</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>LMAppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>90E0446B181D4C5B006F3379</key>
-		<dict>
-			<key>fileRef</key>
-			<string>90E0446A181D4C5B006F3379</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>90E0446C181D4C5B006F3379</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>90E0446D181D4C5B006F3379</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>90E0446D181D4C5B006F3379</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>90E0446E181D4C5B006F3379</key>
-		<dict>
-			<key>fileRef</key>
-			<string>90E0446C181D4C5B006F3379</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>90E0446F181D4C5B006F3379</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>LMViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>90E04470181D4C5B006F3379</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>LMViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>90E04471181D4C5B006F3379</key>
-		<dict>
-			<key>fileRef</key>
-			<string>90E04470181D4C5B006F3379</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>90E04472181D4C5B006F3379</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Images.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>90E04473181D4C5B006F3379</key>
-		<dict>
-			<key>fileRef</key>
-			<string>90E04472181D4C5B006F3379</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>90E04474181D4C5B006F3379</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>90E04486181D4C5B006F3379</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>90E04475181D4C5B006F3379</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>90E0447A181D4C5B006F3379</string>
-				<string>90E0447C181D4C5B006F3379</string>
-				<string>90E0447B181D4C5B006F3379</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>90E04476181D4C5B006F3379</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>90E04484181D4C5B006F3379</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>90E04477181D4C5B006F3379</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>90E0448C181D4C5B006F3379</string>
-			<key>buildPhases</key>
-			<array>
-				<string>90E04474181D4C5B006F3379</string>
-				<string>90E04475181D4C5B006F3379</string>
-				<string>90E04476181D4C5B006F3379</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>90E0447E181D4C5B006F3379</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>LeakMotionTests</string>
-			<key>productName</key>
-			<string>LeakMotionTests</string>
-			<key>productReference</key>
-			<string>90E04478181D4C5B006F3379</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>90E04478181D4C5B006F3379</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>LeakMotionTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>90E04479181D4C5B006F3379</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>XCTest.framework</string>
-			<key>path</key>
-			<string>Library/Frameworks/XCTest.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>90E0447A181D4C5B006F3379</key>
-		<dict>
-			<key>fileRef</key>
-			<string>90E04479181D4C5B006F3379</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>90E0447B181D4C5B006F3379</key>
-		<dict>
-			<key>fileRef</key>
-			<string>90E0445A181D4C5B006F3379</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>90E0447C181D4C5B006F3379</key>
-		<dict>
-			<key>fileRef</key>
-			<string>90E0445E181D4C5B006F3379</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>90E0447D181D4C5B006F3379</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>90E0444F181D4C5B006F3379</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>90E04456181D4C5B006F3379</string>
-			<key>remoteInfo</key>
-			<string>LeakMotion</string>
-		</dict>
-		<key>90E0447E181D4C5B006F3379</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>90E04456181D4C5B006F3379</string>
-			<key>targetProxy</key>
-			<string>90E0447D181D4C5B006F3379</string>
-		</dict>
-		<key>90E0447F181D4C5B006F3379</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>90E04485181D4C5B006F3379</string>
-				<string>90E04480181D4C5B006F3379</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>LeakMotionTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>90E04480181D4C5B006F3379</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>90E04481181D4C5B006F3379</string>
-				<string>90E04482181D4C5B006F3379</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>90E04481181D4C5B006F3379</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>LeakMotionTests-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>90E04482181D4C5B006F3379</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>90E04483181D4C5B006F3379</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>90E04483181D4C5B006F3379</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.strings</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>90E04484181D4C5B006F3379</key>
-		<dict>
-			<key>fileRef</key>
-			<string>90E04482181D4C5B006F3379</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>90E04485181D4C5B006F3379</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>LeakMotionTests.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>90E04486181D4C5B006F3379</key>
-		<dict>
-			<key>fileRef</key>
-			<string>90E04485181D4C5B006F3379</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>90E04487181D4C5B006F3379</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string>-objC</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>90E04488181D4C5B006F3379</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>OTHER_LDFLAGS</key>
-				<string>-objC</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>90E04489181D4C5B006F3379</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>90E0448A181D4C5B006F3379</string>
-				<string>90E0448B181D4C5B006F3379</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>90E0448A181D4C5B006F3379</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>7721C27AA9C845D083829123</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
-				<string>LaunchImage</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>/Users/acsalu/Developer/LeakMotion</string>
-				</array>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>LeakMotion/LeakMotion-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>LeakMotion/LeakMotion-Info.plist</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>90E0448B181D4C5B006F3379</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>7721C27AA9C845D083829123</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
-				<string>LaunchImage</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>/Users/acsalu/Developer/LeakMotion</string>
-				</array>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>LeakMotion/LeakMotion-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>LeakMotion/LeakMotion-Info.plist</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>90E0448C181D4C5B006F3379</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>90E0448D181D4C5B006F3379</string>
-				<string>90E0448E181D4C5B006F3379</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>90E0448D181D4C5B006F3379</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
-				<key>BUNDLE_LOADER</key>
-				<string>$(BUILT_PRODUCTS_DIR)/LeakMotion.app/LeakMotion</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
-				</array>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>LeakMotion/LeakMotion-Prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>LeakMotionTests/LeakMotionTests-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUNDLE_LOADER)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>xctest</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>90E0448E181D4C5B006F3379</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
-				<key>BUNDLE_LOADER</key>
-				<string>$(BUILT_PRODUCTS_DIR)/LeakMotion.app/LeakMotion</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
-				</array>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>LeakMotion/LeakMotion-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>LeakMotionTests/LeakMotionTests-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUNDLE_LOADER)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>xctest</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>CA1B6F857BBB4B8DA2EBBE6B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0277BE28632549D09E549599</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>90E0444F181D4C5B006F3379</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		900B8D3D181E53FD0019F732 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 900B8D3C181E53FD0019F732 /* MapKit.framework */; };
+		900B8D40181E58410019F732 /* LMDrawShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 900B8D3F181E58410019F732 /* LMDrawShapeView.m */; };
+		900B8D43181E60440019F732 /* LMChooseShapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 900B8D42181E60440019F732 /* LMChooseShapeViewController.m */; };
+		90550E02181E23160011E327 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90550E01181E23160011E327 /* QuartzCore.framework */; };
+		90550E04181E28330011E327 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90550E03181E28330011E327 /* AVFoundation.framework */; };
+		90550E06181E283A0011E327 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90550E05181E283A0011E327 /* CoreData.framework */; };
+		90550E08181E28410011E327 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90550E07181E28410011E327 /* CoreLocation.framework */; };
+		90550E0A181E28470011E327 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90550E09181E28470011E327 /* CoreText.framework */; };
+		90550E0C181E284B0011E327 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90550E0B181E284B0011E327 /* GLKit.framework */; };
+		90550E0E181E28520011E327 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90550E0D181E28520011E327 /* ImageIO.framework */; };
+		90550E10181E28580011E327 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 90550E0F181E28580011E327 /* libc++.dylib */; };
+		90550E12181E28660011E327 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 90550E11181E28660011E327 /* libicucore.dylib */; };
+		90550E14181E286B0011E327 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 90550E13181E286B0011E327 /* libz.dylib */; };
+		90550E16181E28720011E327 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90550E15181E28720011E327 /* OpenGLES.framework */; };
+		90550E18181E28790011E327 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90550E17181E28790011E327 /* SystemConfiguration.framework */; };
+		90550E1A181E29370011E327 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90550E19181E29370011E327 /* GoogleMaps.framework */; };
+		90550E1C181E29610011E327 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 90550E1B181E29610011E327 /* GoogleMaps.bundle */; };
+		90550E1F181E2A0A0011E327 /* LMMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90550E1E181E2A0A0011E327 /* LMMapViewController.m */; };
+		90E0445B181D4C5B006F3379 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E0445A181D4C5B006F3379 /* Foundation.framework */; };
+		90E0445D181D4C5B006F3379 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E0445C181D4C5B006F3379 /* CoreGraphics.framework */; };
+		90E0445F181D4C5B006F3379 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E0445E181D4C5B006F3379 /* UIKit.framework */; };
+		90E04465181D4C5B006F3379 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 90E04463181D4C5B006F3379 /* InfoPlist.strings */; };
+		90E04467181D4C5B006F3379 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E04466181D4C5B006F3379 /* main.m */; };
+		90E0446B181D4C5B006F3379 /* LMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E0446A181D4C5B006F3379 /* LMAppDelegate.m */; };
+		90E0446E181D4C5B006F3379 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90E0446C181D4C5B006F3379 /* Main.storyboard */; };
+		90E04471181D4C5B006F3379 /* LMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E04470181D4C5B006F3379 /* LMViewController.m */; };
+		90E04473181D4C5B006F3379 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90E04472181D4C5B006F3379 /* Images.xcassets */; };
+		90E0447A181D4C5B006F3379 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E04479181D4C5B006F3379 /* XCTest.framework */; };
+		90E0447B181D4C5B006F3379 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E0445A181D4C5B006F3379 /* Foundation.framework */; };
+		90E0447C181D4C5B006F3379 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E0445E181D4C5B006F3379 /* UIKit.framework */; };
+		90E04484181D4C5B006F3379 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 90E04482181D4C5B006F3379 /* InfoPlist.strings */; };
+		90E04486181D4C5B006F3379 /* LeakMotionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E04485181D4C5B006F3379 /* LeakMotionTests.m */; };
+		CA1B6F857BBB4B8DA2EBBE6B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0277BE28632549D09E549599 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		90E0447D181D4C5B006F3379 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90E0444F181D4C5B006F3379 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90E04456181D4C5B006F3379;
+			remoteInfo = LeakMotion;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0277BE28632549D09E549599 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7721C27AA9C845D083829123 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		900B8D3C181E53FD0019F732 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		900B8D3E181E58410019F732 /* LMDrawShapeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMDrawShapeView.h; sourceTree = "<group>"; };
+		900B8D3F181E58410019F732 /* LMDrawShapeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMDrawShapeView.m; sourceTree = "<group>"; };
+		900B8D41181E60440019F732 /* LMChooseShapeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMChooseShapeViewController.h; sourceTree = "<group>"; };
+		900B8D42181E60440019F732 /* LMChooseShapeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMChooseShapeViewController.m; sourceTree = "<group>"; };
+		90550E01181E23160011E327 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		90550E03181E28330011E327 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		90550E05181E283A0011E327 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		90550E07181E28410011E327 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		90550E09181E28470011E327 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		90550E0B181E284B0011E327 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		90550E0D181E28520011E327 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		90550E0F181E28580011E327 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		90550E11181E28660011E327 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		90550E13181E286B0011E327 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		90550E15181E28720011E327 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		90550E17181E28790011E327 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		90550E19181E29370011E327 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
+		90550E1B181E29610011E327 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		90550E1D181E2A0A0011E327 /* LMMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMMapViewController.h; sourceTree = "<group>"; };
+		90550E1E181E2A0A0011E327 /* LMMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMMapViewController.m; sourceTree = "<group>"; };
+		90E04457181D4C5B006F3379 /* LeakMotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeakMotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		90E0445A181D4C5B006F3379 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		90E0445C181D4C5B006F3379 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		90E0445E181D4C5B006F3379 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		90E04462181D4C5B006F3379 /* LeakMotion-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LeakMotion-Info.plist"; sourceTree = "<group>"; };
+		90E04464181D4C5B006F3379 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		90E04466181D4C5B006F3379 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		90E04468181D4C5B006F3379 /* LeakMotion-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LeakMotion-Prefix.pch"; sourceTree = "<group>"; };
+		90E04469181D4C5B006F3379 /* LMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMAppDelegate.h; sourceTree = "<group>"; };
+		90E0446A181D4C5B006F3379 /* LMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMAppDelegate.m; sourceTree = "<group>"; };
+		90E0446D181D4C5B006F3379 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		90E0446F181D4C5B006F3379 /* LMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMViewController.h; sourceTree = "<group>"; };
+		90E04470181D4C5B006F3379 /* LMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMViewController.m; sourceTree = "<group>"; };
+		90E04472181D4C5B006F3379 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		90E04478181D4C5B006F3379 /* LeakMotionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeakMotionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		90E04479181D4C5B006F3379 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		90E04481181D4C5B006F3379 /* LeakMotionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LeakMotionTests-Info.plist"; sourceTree = "<group>"; };
+		90E04483181D4C5B006F3379 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		90E04485181D4C5B006F3379 /* LeakMotionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeakMotionTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		90E04454181D4C5B006F3379 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				900B8D3D181E53FD0019F732 /* MapKit.framework in Frameworks */,
+				90550E18181E28790011E327 /* SystemConfiguration.framework in Frameworks */,
+				90550E16181E28720011E327 /* OpenGLES.framework in Frameworks */,
+				90550E14181E286B0011E327 /* libz.dylib in Frameworks */,
+				90550E12181E28660011E327 /* libicucore.dylib in Frameworks */,
+				90550E10181E28580011E327 /* libc++.dylib in Frameworks */,
+				90550E0E181E28520011E327 /* ImageIO.framework in Frameworks */,
+				90550E0C181E284B0011E327 /* GLKit.framework in Frameworks */,
+				90550E0A181E28470011E327 /* CoreText.framework in Frameworks */,
+				90550E08181E28410011E327 /* CoreLocation.framework in Frameworks */,
+				90550E06181E283A0011E327 /* CoreData.framework in Frameworks */,
+				90550E04181E28330011E327 /* AVFoundation.framework in Frameworks */,
+				90550E02181E23160011E327 /* QuartzCore.framework in Frameworks */,
+				90E0445D181D4C5B006F3379 /* CoreGraphics.framework in Frameworks */,
+				90E0445F181D4C5B006F3379 /* UIKit.framework in Frameworks */,
+				90550E1A181E29370011E327 /* GoogleMaps.framework in Frameworks */,
+				90E0445B181D4C5B006F3379 /* Foundation.framework in Frameworks */,
+				CA1B6F857BBB4B8DA2EBBE6B /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90E04475181D4C5B006F3379 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90E0447A181D4C5B006F3379 /* XCTest.framework in Frameworks */,
+				90E0447C181D4C5B006F3379 /* UIKit.framework in Frameworks */,
+				90E0447B181D4C5B006F3379 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		90E0444E181D4C5B006F3379 = {
+			isa = PBXGroup;
+			children = (
+				90E04460181D4C5B006F3379 /* LeakMotion */,
+				90E0447F181D4C5B006F3379 /* LeakMotionTests */,
+				90E04459181D4C5B006F3379 /* Frameworks */,
+				90E04458181D4C5B006F3379 /* Products */,
+				7721C27AA9C845D083829123 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		90E04458181D4C5B006F3379 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				90E04457181D4C5B006F3379 /* LeakMotion.app */,
+				90E04478181D4C5B006F3379 /* LeakMotionTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		90E04459181D4C5B006F3379 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				900B8D3C181E53FD0019F732 /* MapKit.framework */,
+				90550E1B181E29610011E327 /* GoogleMaps.bundle */,
+				90550E19181E29370011E327 /* GoogleMaps.framework */,
+				90550E17181E28790011E327 /* SystemConfiguration.framework */,
+				90550E15181E28720011E327 /* OpenGLES.framework */,
+				90550E13181E286B0011E327 /* libz.dylib */,
+				90550E11181E28660011E327 /* libicucore.dylib */,
+				90550E0F181E28580011E327 /* libc++.dylib */,
+				90550E0D181E28520011E327 /* ImageIO.framework */,
+				90550E0B181E284B0011E327 /* GLKit.framework */,
+				90550E09181E28470011E327 /* CoreText.framework */,
+				90550E07181E28410011E327 /* CoreLocation.framework */,
+				90550E05181E283A0011E327 /* CoreData.framework */,
+				90550E03181E28330011E327 /* AVFoundation.framework */,
+				90550E01181E23160011E327 /* QuartzCore.framework */,
+				90E0445A181D4C5B006F3379 /* Foundation.framework */,
+				90E0445C181D4C5B006F3379 /* CoreGraphics.framework */,
+				90E0445E181D4C5B006F3379 /* UIKit.framework */,
+				90E04479181D4C5B006F3379 /* XCTest.framework */,
+				0277BE28632549D09E549599 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		90E04460181D4C5B006F3379 /* LeakMotion */ = {
+			isa = PBXGroup;
+			children = (
+				90E04469181D4C5B006F3379 /* LMAppDelegate.h */,
+				90E0446A181D4C5B006F3379 /* LMAppDelegate.m */,
+				90E0446C181D4C5B006F3379 /* Main.storyboard */,
+				90E0446F181D4C5B006F3379 /* LMViewController.h */,
+				90E04470181D4C5B006F3379 /* LMViewController.m */,
+				90550E1D181E2A0A0011E327 /* LMMapViewController.h */,
+				90550E1E181E2A0A0011E327 /* LMMapViewController.m */,
+				900B8D41181E60440019F732 /* LMChooseShapeViewController.h */,
+				900B8D42181E60440019F732 /* LMChooseShapeViewController.m */,
+				900B8D3E181E58410019F732 /* LMDrawShapeView.h */,
+				900B8D3F181E58410019F732 /* LMDrawShapeView.m */,
+				90E04472181D4C5B006F3379 /* Images.xcassets */,
+				90E04461181D4C5B006F3379 /* Supporting Files */,
+			);
+			path = LeakMotion;
+			sourceTree = "<group>";
+		};
+		90E04461181D4C5B006F3379 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				90E04462181D4C5B006F3379 /* LeakMotion-Info.plist */,
+				90E04463181D4C5B006F3379 /* InfoPlist.strings */,
+				90E04466181D4C5B006F3379 /* main.m */,
+				90E04468181D4C5B006F3379 /* LeakMotion-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		90E0447F181D4C5B006F3379 /* LeakMotionTests */ = {
+			isa = PBXGroup;
+			children = (
+				90E04485181D4C5B006F3379 /* LeakMotionTests.m */,
+				90E04480181D4C5B006F3379 /* Supporting Files */,
+			);
+			path = LeakMotionTests;
+			sourceTree = "<group>";
+		};
+		90E04480181D4C5B006F3379 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				90E04481181D4C5B006F3379 /* LeakMotionTests-Info.plist */,
+				90E04482181D4C5B006F3379 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		90E04456181D4C5B006F3379 /* LeakMotion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90E04489181D4C5B006F3379 /* Build configuration list for PBXNativeTarget "LeakMotion" */;
+			buildPhases = (
+				797ACF207BC14B0C9EA8E0D5 /* Check Pods Manifest.lock */,
+				90E04453181D4C5B006F3379 /* Sources */,
+				90E04454181D4C5B006F3379 /* Frameworks */,
+				90E04455181D4C5B006F3379 /* Resources */,
+				4CCEA8B09C0D40318E098038 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LeakMotion;
+			productName = LeakMotion;
+			productReference = 90E04457181D4C5B006F3379 /* LeakMotion.app */;
+			productType = "com.apple.product-type.application";
+		};
+		90E04477181D4C5B006F3379 /* LeakMotionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90E0448C181D4C5B006F3379 /* Build configuration list for PBXNativeTarget "LeakMotionTests" */;
+			buildPhases = (
+				90E04474181D4C5B006F3379 /* Sources */,
+				90E04475181D4C5B006F3379 /* Frameworks */,
+				90E04476181D4C5B006F3379 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				90E0447E181D4C5B006F3379 /* PBXTargetDependency */,
+			);
+			name = LeakMotionTests;
+			productName = LeakMotionTests;
+			productReference = 90E04478181D4C5B006F3379 /* LeakMotionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		90E0444F181D4C5B006F3379 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LM;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = com.penser;
+				TargetAttributes = {
+					90E04477181D4C5B006F3379 = {
+						TestTargetID = 90E04456181D4C5B006F3379;
+					};
+				};
+			};
+			buildConfigurationList = 90E04452181D4C5B006F3379 /* Build configuration list for PBXProject "LeakMotion" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 90E0444E181D4C5B006F3379;
+			productRefGroup = 90E04458181D4C5B006F3379 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				90E04456181D4C5B006F3379 /* LeakMotion */,
+				90E04477181D4C5B006F3379 /* LeakMotionTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		90E04455181D4C5B006F3379 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90E04473181D4C5B006F3379 /* Images.xcassets in Resources */,
+				90E04465181D4C5B006F3379 /* InfoPlist.strings in Resources */,
+				90E0446E181D4C5B006F3379 /* Main.storyboard in Resources */,
+				90550E1C181E29610011E327 /* GoogleMaps.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90E04476181D4C5B006F3379 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90E04484181D4C5B006F3379 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4CCEA8B09C0D40318E098038 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		797ACF207BC14B0C9EA8E0D5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		90E04453181D4C5B006F3379 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				900B8D43181E60440019F732 /* LMChooseShapeViewController.m in Sources */,
+				900B8D40181E58410019F732 /* LMDrawShapeView.m in Sources */,
+				90E04467181D4C5B006F3379 /* main.m in Sources */,
+				90E0446B181D4C5B006F3379 /* LMAppDelegate.m in Sources */,
+				90550E1F181E2A0A0011E327 /* LMMapViewController.m in Sources */,
+				90E04471181D4C5B006F3379 /* LMViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90E04474181D4C5B006F3379 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90E04486181D4C5B006F3379 /* LeakMotionTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		90E0447E181D4C5B006F3379 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90E04456181D4C5B006F3379 /* LeakMotion */;
+			targetProxy = 90E0447D181D4C5B006F3379 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		90E04463181D4C5B006F3379 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90E04464181D4C5B006F3379 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		90E0446C181D4C5B006F3379 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90E0446D181D4C5B006F3379 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		90E04482181D4C5B006F3379 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90E04483181D4C5B006F3379 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		90E04487181D4C5B006F3379 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		90E04488181D4C5B006F3379 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		90E0448A181D4C5B006F3379 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7721C27AA9C845D083829123 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/acsalu/Developer/LeakMotion,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LeakMotion/LeakMotion-Prefix.pch";
+				INFOPLIST_FILE = "LeakMotion/LeakMotion-Info.plist";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		90E0448B181D4C5B006F3379 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7721C27AA9C845D083829123 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/acsalu/Developer/LeakMotion,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LeakMotion/LeakMotion-Prefix.pch";
+				INFOPLIST_FILE = "LeakMotion/LeakMotion-Info.plist";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		90E0448D181D4C5B006F3379 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LeakMotion.app/LeakMotion";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LeakMotion/LeakMotion-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "LeakMotionTests/LeakMotionTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		90E0448E181D4C5B006F3379 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LeakMotion.app/LeakMotion";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LeakMotion/LeakMotion-Prefix.pch";
+				INFOPLIST_FILE = "LeakMotionTests/LeakMotionTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		90E04452181D4C5B006F3379 /* Build configuration list for PBXProject "LeakMotion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90E04487181D4C5B006F3379 /* Debug */,
+				90E04488181D4C5B006F3379 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90E04489181D4C5B006F3379 /* Build configuration list for PBXNativeTarget "LeakMotion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90E0448A181D4C5B006F3379 /* Debug */,
+				90E0448B181D4C5B006F3379 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90E0448C181D4C5B006F3379 /* Build configuration list for PBXNativeTarget "LeakMotionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90E0448D181D4C5B006F3379 /* Debug */,
+				90E0448E181D4C5B006F3379 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 90E0444F181D4C5B006F3379 /* Project object */;
+}
