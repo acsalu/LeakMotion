@@ -7,6 +7,7 @@
 //
 
 #import "LMViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface LMViewController ()
 
@@ -14,16 +15,16 @@
 
 @implementation LMViewController
 
-- (void)viewDidLoad
+- (IBAction)toggleAnimation:(UIButton *)sender
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
+    if (_isAnimating) {
+        
+        [sender setTitle:@"Start Animation" forState:UIControlStateNormal];
+    } else {
+        [sender setTitle:@"Stop Animation" forState:UIControlStateNormal];
+    }
+    
+    self.isAnimating = !self.isAnimating;
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
 @end

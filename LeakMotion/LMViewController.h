@@ -10,4 +10,11 @@
 
 @interface LMViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *compass;
+@property (weak, nonatomic) IBOutlet UIButton *animateButton;
+@property (nonatomic) BOOL isAnimating;
+
+
+- (IBAction)toggleAnimation:(UIButton *)sender;
+
 @end
