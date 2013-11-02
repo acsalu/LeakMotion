@@ -17,5 +17,6 @@
 
 
 - (IBAction)toggleAnimation:(UIButton *)sender;
+- (IBAction)testServer:(id)sender;
 
 @end

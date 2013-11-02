@@ -8,6 +8,7 @@
 
 #import "LMViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import <AFNetworking/AFNetworking.h>
 
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
 
@@ -33,6 +34,23 @@ NSString *kRotationDirectionCounterClockwise = @"counterclockwise";
     }
     
     self.isAnimating = !self.isAnimating;
+}
+
+- (IBAction)testServer:(id)sender
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    NSDictionary *prams = @{@"map":@"Acsa is very handsome."};
+    [manager POST:@"http://leakmotion-dev.herokuapp.com/"
+       parameters:prams
+constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+    
+} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    NSString *response = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+    NSLog(@"[response] %@", response);
+} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    NSLog(@"[fail %@]", error);
+}];
 }
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
