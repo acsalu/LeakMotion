@@ -83,7 +83,7 @@
     
     
     self.mapView = [LMData sharedData].mapView;
-    [self.view addSubview:self.mapView];
+    [self.view insertSubview:self.mapView belowSubview:self.dismissButton];
     self.mapView.delegate = self;
 
     

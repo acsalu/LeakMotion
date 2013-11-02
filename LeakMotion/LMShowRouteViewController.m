@@ -344,8 +344,7 @@
         //calculate distance and show it.
         [_averageSpeedLabel setText:[NSString stringWithFormat:@"%.2f m/s", self.averageSpeed]];
         //calculate current sum distance
-        [_ranDistanceLabel setText:[[self getTotalRanLength] stringValue]];
-        
+        [_ranDistanceLabel setText:[self totalRanLengthString]];
     }
     
     
@@ -359,11 +358,16 @@
     //[[LMData sharedData].mapView setRegion:region animated:YES];
 }
 
-- (NSNumber*)getTotalRanLength{
+- (NSString *)totalRanLengthString{
 
     CLLocationDistance distance = [self.currentLocation distanceFromLocation:self.previousLocation];
     self.totalRanLength = self.totalRanLength + distance;
-    return [NSNumber numberWithFloat:self.totalRanLength];
+    if (self.totalRanLength < 0) self.totalRanLength = 0.0f;
+    if (self.totalRanLength > 800) {
+        return [NSString stringWithFormat:@"%.2f Km", self.totalRanLength / 1000];
+    } else {
+        return [NSString stringWithFormat:@"%.1f m", self.totalRanLength];
+    }
 
 }
 
@@ -373,7 +377,7 @@
 - (float)averageSpeed{
     
     float totalTime = CACurrentMediaTime() - _startTime;
-    float averageSpeed = [[self getTotalRanLength] floatValue]/ totalTime;
+    float averageSpeed = self.totalRanLength / totalTime;
     return averageSpeed;
 }
 

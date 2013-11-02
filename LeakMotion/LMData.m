@@ -65,7 +65,8 @@
         NSDictionary *meDict = [NSJSONSerialization JSONObjectWithData:responseData options:nil error:nil];
 //        NSLog(@"%@", meDataString);
         self.facebookId = meDict[@"id"];
-        [self.delegate data:self finishedFacebookMeQueryWithFacebookId:self.facebookId];
+        self.userName = meDict[@"name"];
+        [self.delegate data:self finishedFacebookMeQueryWithFacebookId:self.facebookId andName:self.userName];
         
         NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=large", meDict[@"id"]]];
 //        self.profilePic = [UIImage imageWithData:[NSData dataWithContentsOfURL:url]];
