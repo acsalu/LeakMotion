@@ -14,6 +14,7 @@
 <MKMapViewDelegate,CLLocationManagerDelegate>
 
 @property(strong, nonatomic) MKMapView *mapView;
+@property(nonatomic)BOOL willDismiss;
 @property(strong, nonatomic) UILabel *AverageSpeedLabel;
 @property(strong, nonatomic) UILabel *ranDistanceLabel;
 @property(strong, nonatomic) IBOutlet UIButton *startRunButton;
