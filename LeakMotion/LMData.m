@@ -82,4 +82,9 @@
     return _mapView;
 }
 
++ (UIColor *)redColor
+{
+    return [UIColor colorWithRed:186.0/255.0 green:0.0 blue:0.0 alpha:1.0f];
+}
+
 @end

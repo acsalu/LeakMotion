@@ -31,6 +31,10 @@
 @property (weak, nonatomic) id<LMDataDelegate> delegate;
 @property (strong, nonatomic) MKMapView *mapView;
 
+
++ (UIColor *)redColor;
+
+
 + (LMData *)sharedData;
 - (void)facebook;
 

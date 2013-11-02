@@ -29,7 +29,7 @@
     self.navigationController.navigationBarHidden = YES;
 	// Do any additional setup after loading the view.
     
-    _pickPathButton.buttonColor = [UIColor turquoiseColor];
+    _pickPathButton.buttonColor = [LMData redColor];
     _pickPathButton.shadowColor = [UIColor greenColor];
     _pickPathButton.shadowHeight = 0.0f;
     _pickPathButton.cornerRadius = 6.0f;
@@ -63,7 +63,11 @@
                     animations:^{
                         self.mapDemoView.image = toImage;
                     } completion:nil];
-    
+    _mapDemoView.layer.shadowColor = [UIColor blackColor].CGColor;
+    _mapDemoView.layer.shadowOffset = CGSizeMake(2, 2);
+    _mapDemoView.layer.shadowOpacity = .7;
+    _mapDemoView.layer.shadowRadius = 3.0;
+    _mapDemoView.clipsToBounds = NO;
 }
 
 - (void)showProfilePic
