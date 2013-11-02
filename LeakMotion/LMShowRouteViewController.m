@@ -43,19 +43,19 @@
     //NSLog(@"the previous lon before anything %f", self.previousLocation.coordinate.longitude);
     
     //init views
-    _mapView = [LMData sharedData].mapView;
-    [self.view addSubview:_mapView];
     
 
-    
-    
-    //turn into NO after drowing route,
-    self.drawRoute = YES;
-    [self drawRouteWithJSONArray:dataArray];
+    _mapView = [LMData sharedData].mapView;
+    _mapView.frame = CGRectMake(0, 0, 320, 568);
+    [self.view addSubview:_mapView];
     
     _mapView.delegate = self;
     [_mapView setNeedsDisplay];
     _mapView.showsUserLocation = YES;
+    
+    //turn into NO after drowing route,
+    self.drawRoute = YES;
+    [self drawRouteWithJSONArray:dataArray];
 
     [self zoomIn:NULL];
     
@@ -79,7 +79,8 @@
     [_doneButton setTitle:@"Give Up" forState:UIControlStateNormal];
     [_doneButton addTarget:self action:@selector(giveUP:) forControlEvents:UIControlEventTouchUpInside];
     
-    [self.view addSubview:_doneButton];
+    [self.view insertSubview:_doneButton belowSubview:self.mapView];
+    
     
     
     [self setRunningInfoControlsHidden:YES];
@@ -108,21 +109,30 @@
         countDownImageView.center = CGPointMake(160, 270);
         [self.view addSubview:countDownImageView];
         
-        countDownImageView.transform = CGAffineTransformMakeScale(3.3, 3.3);
+        countDownImageView.transform = CGAffineTransformMakeScale(4.0, 4.0);
         [UIView animateWithDuration:0.7 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
             // animate it to the identity transform (100% scale)
             countDownImageView.transform = CGAffineTransformIdentity;
         } completion:^(BOOL finished){
             // if you want to do something once the animation finishes, put it here
-
-            
-            double delayInSeconds = 0.6;
-            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
-            dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            [self setRunningInfoControlsHidden:NO];
+            [UIView animateWithDuration:0.6 animations:^{
+                CGRect frame = CGRectMake(0, 0, 320, 370);
+                self.mapView.frame = frame;
+            } completion:^(BOOL finished) {
                 [countDownImageView removeFromSuperview];
-                [self setRunningInfoControlsHidden:NO];
+
                 [self startRunning];
-            });
+            }];
+            
+            
+//            double delayInSeconds = 0.6;
+//            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+//            dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+//                [countDownImageView removeFromSuperview];
+//                [self setRunningInfoControlsHidden:NO];
+//                [self startRunning];
+//            });
         }];
         
         
