@@ -7,13 +7,13 @@
 //
 
 #import "LMAppDelegate.h"
-#import <GoogleMaps/GoogleMaps.h>
+
 
 @implementation LMAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [GMSServices provideAPIKey:@"AIzaSyCuDpSd2-dqGT9l_zn8-C5YIvildgO2re4"];
+
     return YES;
 }
 							
