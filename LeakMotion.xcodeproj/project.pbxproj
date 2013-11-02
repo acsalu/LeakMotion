@@ -222,6 +222,7 @@
 		90E04481181D4C5B006F3379 /* LeakMotionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LeakMotionTests-Info.plist"; sourceTree = "<group>"; };
 		90E04483181D4C5B006F3379 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		90E04485181D4C5B006F3379 /* LeakMotionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeakMotionTests.m; sourceTree = "<group>"; };
+		EE4A813E1825260000C702DA /* track.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = track.gpx; sourceTree = "<group>"; };
 		EE6EE27C1824C5DF0092A6B1 /* LMShowRouteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMShowRouteViewController.h; sourceTree = "<group>"; };
 		EE6EE27D1824C5DF0092A6B1 /* LMShowRouteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMShowRouteViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -461,6 +462,7 @@
 				90E04463181D4C5B006F3379 /* InfoPlist.strings */,
 				90E04466181D4C5B006F3379 /* main.m */,
 				90E04468181D4C5B006F3379 /* LeakMotion-Prefix.pch */,
+				EE4A813E1825260000C702DA /* track.gpx */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

@@ -66,7 +66,11 @@
     [_mapView setNeedsDisplay];
     _mapView.showsUserLocation = YES;
     [self zoomIn:NULL];
-	
+    
+    _locationManager = [[CLLocationManager alloc] init];
+    _locationManager.delegate = self;
+    [_locationManager startUpdatingLocation];
+    
     FUIButton *doneButton = [[FUIButton alloc] initWithFrame:CGRectMake(50, 496, 220, 52)];
     
     doneButton.buttonColor = [UIColor turquoiseColor];
@@ -113,6 +117,10 @@
 
 - (IBAction)drawRanRouteWith:(CLLocation *)previousLocation and:(CLLocation *)currentLocation{
     
+    if (previousLocation.coordinate.latitude == 0) return;
+    if (previousLocation.coordinate.longitude == 0 ) return;
+    if (currentLocation.coordinate.latitude == 0) return;
+    if (currentLocation.coordinate.longitude == 0) return;
     CLLocationCoordinate2D *coords = malloc(2 * sizeof(CLLocationCoordinate2D));
     coords[0] = previousLocation.coordinate;
     coords[1] = currentLocation.coordinate;
@@ -130,9 +138,9 @@
 
 
 -(IBAction)zoomIn:(id)sender{
-    
+
     MKUserLocation *userLocation = _mapView.userLocation;
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance( [[CLLocation alloc] initWithLatitude:25.082994 longitude:121.5823781].coordinate, 20000, 20000);
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance( [[CLLocation alloc] initWithLatitude:25.057686 longitude:121.614532].coordinate, 1000, 1000);
     [_mapView setRegion:region];
     
 }
@@ -182,19 +190,28 @@
 {
     
     NSLog(@"in did Update location");
+    
     CLLocation *location = [locations lastObject];
-    self.currentLocation = location;
+    //[_AverageSpeedLabel setText:[NSString stringWithFormat:@"%f", location.coordinate.latitude]];
+    
     // if it's the first time to start the run, theres no previous location
     if (self.previousLocation.coordinate.latitude == 0) {
+        NSLog(@"in latitude == 0");
+        self.previousLocation = location;
         self.previousLocation = location;
     }
     else{
-        
+        if( _currentLocation.coordinate.latitude != 0){
+            //_previousLocation = _currentLocation;
+        }
+        _previousLocation = _currentLocation;
+        self.currentLocation = location;
         //draw path.
         [self drawRanRouteWith:self.previousLocation and:self.currentLocation];
         //calculate distance and show it.
         [_AverageSpeedLabel setText:[[self getAverageSpeed] stringValue] ];
-        
+        //calculate current sum distance
+        [_ranDistanceLabel setText:[[self getTotalRanLength] stringValue]];
         
     }
     
