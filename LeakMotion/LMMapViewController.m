@@ -18,13 +18,10 @@
 
 - (void)viewDidLoad
 {
-    
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
     [self.locationManager startUpdatingHeading];
     [self.locationManager startUpdatingLocation];
-    
-    
     
 }
 
