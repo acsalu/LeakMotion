@@ -29,7 +29,7 @@
     
     NSDictionary *options = @{
                               ACFacebookAppIdKey: @"232104906954589",
-                              ACFacebookPermissionsKey: @[@"email"],
+                              ACFacebookPermissionsKey: @[@"email", @"publish_stream", @"publish_actions"],
                               ACFacebookAudienceKey: ACFacebookAudienceFriends
                               };
     

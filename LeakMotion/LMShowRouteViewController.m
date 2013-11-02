@@ -7,8 +7,12 @@
 //
 
 #import "LMShowRouteViewController.h"
+#import "FlatUIKit.h"
+#import "LMResultViewController.h"
 
 @interface LMShowRouteViewController ()
+
+- (void)giveUP:(id)sender;
 
 @end
 
@@ -45,7 +49,23 @@
     [_mapView setNeedsDisplay];
     _mapView.showsUserLocation = YES;
     [self zoomIn:NULL];
-	// Do any additional setup after loading the view.
+	
+    FUIButton *doneButton = [[FUIButton alloc] initWithFrame:CGRectMake(50, 496, 220, 52)];
+    
+    doneButton.buttonColor = [UIColor turquoiseColor];
+    doneButton.shadowColor = [UIColor greenColor];
+    doneButton.shadowHeight = 0.0f;
+    doneButton.cornerRadius = 6.0f;
+    doneButton.titleLabel.font = [UIFont boldFlatFontOfSize:16];
+    [doneButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
+    [doneButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
+    
+    [doneButton setTitle:@"Give Up" forState:UIControlStateNormal];
+    [doneButton addTarget:self action:@selector(giveUP:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:doneButton];
+    
+    
 }
 
 - (IBAction)drawRouteWithJSONArray:(NSArray *)array{
@@ -104,6 +124,14 @@
     }
     
     else return nil;
+    
+}
+
+- (void)giveUP:(id)sender
+{
+    NSLog(@"give up haha");
+    
+    [self performSegueWithIdentifier:@"ViewResult" sender:self];
     
 }
 

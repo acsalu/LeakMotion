@@ -437,6 +437,8 @@
 				905D8ABA1824C2E600ED4601 /* LMLobbyViewController.m */,
 				905D8AAE1824BB2100ED4601 /* LMChoosePathViewController.h */,
 				905D8AAF1824BB2100ED4601 /* LMChoosePathViewController.m */,
+				EE6EE27C1824C5DF0092A6B1 /* LMShowRouteViewController.h */,
+				EE6EE27D1824C5DF0092A6B1 /* LMShowRouteViewController.m */,
 				905D8AB41824BFD700ED4601 /* LMResultViewController.h */,
 				905D8AB51824BFD700ED4601 /* LMResultViewController.m */,
 				900B8D3E181E58410019F732 /* LMDrawShapeView.h */,
@@ -446,8 +448,6 @@
 				90E04472181D4C5B006F3379 /* Images.xcassets */,
 				909EB6391824E693004EA734 /* Unused */,
 				90E04461181D4C5B006F3379 /* Supporting Files */,
-				EE6EE27C1824C5DF0092A6B1 /* LMShowRouteViewController.h */,
-				EE6EE27D1824C5DF0092A6B1 /* LMShowRouteViewController.m */,
 			);
 			path = LeakMotion;
 			sourceTree = "<group>";
