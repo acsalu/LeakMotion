@@ -223,9 +223,9 @@
 				90E0446F181D4C5B006F3379 /* LMViewController.h */,
 				90E04470181D4C5B006F3379 /* LMViewController.m */,
 				90E04472181D4C5B006F3379 /* Images.xcassets */,
-				90E04461181D4C5B006F3379 /* Supporting Files */,
 				EE6EE27C1824C5DF0092A6B1 /* LMShowRouteViewController.h */,
 				EE6EE27D1824C5DF0092A6B1 /* LMShowRouteViewController.m */,
+				90E04461181D4C5B006F3379 /* Supporting Files */,
 			);
 			path = LeakMotion;
 			sourceTree = "<group>";
@@ -309,6 +309,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = com.penser;
 				TargetAttributes = {
+					90E04456181D4C5B006F3379 = {
+						DevelopmentTeam = YF87G52T96;
+					};
 					90E04477181D4C5B006F3379 = {
 						TestTargetID = 90E04456181D4C5B006F3379;
 					};
@@ -533,6 +536,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/acsalu/Developer/LeakMotion,
@@ -542,6 +547,7 @@
 				INFOPLIST_FILE = "LeakMotion/LeakMotion-Info.plist";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -552,6 +558,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/acsalu/Developer/LeakMotion,
@@ -561,6 +569,7 @@
 				INFOPLIST_FILE = "LeakMotion/LeakMotion-Info.plist";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
