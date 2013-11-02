@@ -16,7 +16,7 @@
 @protocol LMDataDelegate <NSObject>
 
 @optional
-- (void)data:(LMData *)data finishedFacebookMeQueryWithFacebookId:(NSString *)facebookId;
+- (void)data:(LMData *)data finishedFacebookMeQueryWithFacebookId:(NSString *)facebookId andName:(NSString *)name;
 
 @end
 
@@ -27,6 +27,7 @@
 @property (strong, nonatomic) ACAccount *facebookAccount;
 @property (strong, nonatomic) UIImage *profilePic;
 @property (strong, nonatomic) NSString *facebookId;
+@property (strong, nonatomic) NSString *userName;
 @property (weak, nonatomic) id<LMDataDelegate> delegate;
 @property (strong, nonatomic) MKMapView *mapView;
 

@@ -43,19 +43,23 @@
     //NSLog(@"the previous lon before anything %f", self.previousLocation.coordinate.longitude);
     
     //init views
-    _mapView = [LMData sharedData].mapView;
-    [self.view addSubview:_mapView];
     
 
+    [LMData sharedData].mapView = [LMData sharedData].mapView;
+    [LMData sharedData].mapView.frame = CGRectMake(0, 0, 320, 568);
+    [self.view addSubview:[LMData sharedData].mapView];
     
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance( [[CLLocation alloc] initWithLatitude:25.057686 longitude:121.614532].coordinate, 100000, 100000);
+    
+    [[LMData sharedData].mapView setRegion:region animated:NO];
+    
+    [LMData sharedData].mapView.delegate = self;
+    [[LMData sharedData].mapView setNeedsDisplay];
+    [LMData sharedData].mapView.showsUserLocation = YES;
     
     //turn into NO after drowing route,
     self.drawRoute = YES;
     [self drawRouteWithJSONArray:dataArray];
-    
-    _mapView.delegate = self;
-    [_mapView setNeedsDisplay];
-    _mapView.showsUserLocation = YES;
 
     [self zoomIn:NULL];
     
@@ -64,7 +68,7 @@
     [_locationManager startUpdatingLocation];
     [_locationManager startUpdatingHeading];
 
-    [_mapView setUserTrackingMode:MKUserTrackingModeFollowWithHeading animated:YES];
+    [[LMData sharedData].mapView setUserTrackingMode:MKUserTrackingModeFollowWithHeading animated:YES];
     
     _doneButton = [[FUIButton alloc] initWithFrame:CGRectMake(50, 496, 220, 52)];
     
@@ -79,7 +83,8 @@
     [_doneButton setTitle:@"Give Up" forState:UIControlStateNormal];
     [_doneButton addTarget:self action:@selector(giveUP:) forControlEvents:UIControlEventTouchUpInside];
     
-    [self.view addSubview:_doneButton];
+    [self.view insertSubview:_doneButton belowSubview:[LMData sharedData].mapView];
+    
     
     
     [self setRunningInfoControlsHidden:YES];
@@ -108,21 +113,30 @@
         countDownImageView.center = CGPointMake(160, 270);
         [self.view addSubview:countDownImageView];
         
-        countDownImageView.transform = CGAffineTransformMakeScale(3.3, 3.3);
+        countDownImageView.transform = CGAffineTransformMakeScale(4.0, 4.0);
         [UIView animateWithDuration:0.7 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
             // animate it to the identity transform (100% scale)
             countDownImageView.transform = CGAffineTransformIdentity;
         } completion:^(BOOL finished){
             // if you want to do something once the animation finishes, put it here
-
-            
-            double delayInSeconds = 0.6;
-            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
-            dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            [self setRunningInfoControlsHidden:NO];
+            [UIView animateWithDuration:0.6 animations:^{
+                CGRect frame = CGRectMake(0, 0, 320, 370);
+                [LMData sharedData].mapView.frame = frame;
+            } completion:^(BOOL finished) {
                 [countDownImageView removeFromSuperview];
-                [self setRunningInfoControlsHidden:NO];
+
                 [self startRunning];
-            });
+            }];
+            
+            
+//            double delayInSeconds = 0.6;
+//            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+//            dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+//                [countDownImageView removeFromSuperview];
+//                [self setRunningInfoControlsHidden:NO];
+//                [self startRunning];
+//            });
         }];
         
         
@@ -217,7 +231,7 @@
     coords[ [array count] ] = firstCoord.coordinate;
     
     MKPolyline *route = [MKPolyline polylineWithCoordinates:coords count:[array count] + 1];
-    [_mapView addOverlay:route];
+    [[LMData sharedData].mapView addOverlay:route];
     
     
 }
@@ -232,7 +246,7 @@
     coords[0] = previousLocation.coordinate;
     coords[1] = currentLocation.coordinate;
     MKPolyline *line = [MKPolyline polylineWithCoordinates:coords count:2];
-    [_mapView addOverlay:line];
+    [[LMData sharedData].mapView addOverlay:line];
 
 }
 
@@ -240,9 +254,19 @@
 
 -(IBAction)zoomIn:(id)sender{
 
-    MKUserLocation *userLocation = _mapView.userLocation;
+//    MKCoordinateRegion region;
+//    //Set Zoom level using Span
+//    MKCoordinateSpan span;
+//    region.center = [LMData sharedData].mapView.region.center;
+//    
+//    span.latitudeDelta = [LMData sharedData].mapView.region.span.latitudeDelta / 2.0002;
+//    span.longitudeDelta = [LMData sharedData].mapView.region.span.longitudeDelta / 2.0002;
+//    region.span = span;
+//    [[LMData sharedData].mapView setRegion:region animated:YES];
+    
+    MKUserLocation *userLocation = [LMData sharedData].mapView.userLocation;
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance( [[CLLocation alloc] initWithLatitude:25.057686 longitude:121.614532].coordinate, 1000, 1000);
-    [_mapView setRegion:region];
+    [[LMData sharedData].mapView setRegion:region animated:YES];
     
 }
 
@@ -320,8 +344,7 @@
         //calculate distance and show it.
         [_averageSpeedLabel setText:[NSString stringWithFormat:@"%.2f m/s", self.averageSpeed]];
         //calculate current sum distance
-        [_ranDistanceLabel setText:[[self getTotalRanLength] stringValue]];
-        
+        [_ranDistanceLabel setText:[self totalRanLengthString]];
     }
     
     
@@ -331,15 +354,20 @@
     
     //NSString *currentSpeed = [NSString stringWithFormat:@"%f", location.speed];
     
-    //MKCoordinateRegion region = [self.mapView regionThatFits:MKCoordinateRegionMakeWithDistance(startCoord, 800, 800)];
-    //[self.mapView setRegion:region animated:YES];
+    //MKCoordinateRegion region = [[LMData sharedData].mapView regionThatFits:MKCoordinateRegionMakeWithDistance(startCoord, 800, 800)];
+    //[[LMData sharedData].mapView setRegion:region animated:YES];
 }
 
-- (NSNumber*)getTotalRanLength{
+- (NSString *)totalRanLengthString{
 
     CLLocationDistance distance = [self.currentLocation distanceFromLocation:self.previousLocation];
     self.totalRanLength = self.totalRanLength + distance;
-    return [NSNumber numberWithFloat:self.totalRanLength];
+    if (self.totalRanLength < 0) self.totalRanLength = 0.0f;
+    if (self.totalRanLength > 800) {
+        return [NSString stringWithFormat:@"%.2f Km", self.totalRanLength / 1000];
+    } else {
+        return [NSString stringWithFormat:@"%.1f m", self.totalRanLength];
+    }
 
 }
 
@@ -349,7 +377,7 @@
 - (float)averageSpeed{
     
     float totalTime = CACurrentMediaTime() - _startTime;
-    float averageSpeed = [[self getTotalRanLength] floatValue]/ totalTime;
+    float averageSpeed = self.totalRanLength / totalTime;
     return averageSpeed;
 }
 

@@ -52,7 +52,7 @@
 - (IBAction)zoomIn:(id)sender;
 - (IBAction)drawRouteWithJSONArray:(NSArray*)array;
 - (IBAction)drawRanRouteWith:(CLLocation*)previousLocation and:(CLLocation*)currentLocation;
-- (NSNumber*)getTotalRanLength;
+- (NSString *)totalRanLengthString;
 - (void)startRunning;
 - (NSNumber*)getAverageSpeed;
 
