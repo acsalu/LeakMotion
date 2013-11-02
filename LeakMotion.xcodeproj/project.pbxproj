@@ -273,6 +273,8 @@
 		909EB6391824E693004EA734 /* Unused */ = {
 			isa = PBXGroup;
 			children = (
+				900B8D3E181E58410019F732 /* LMDrawShapeView.h */,
+				900B8D3F181E58410019F732 /* LMDrawShapeView.m */,
 				90E0446F181D4C5B006F3379 /* LMViewController.h */,
 				90E04470181D4C5B006F3379 /* LMViewController.m */,
 				900B8D41181E60440019F732 /* LMChooseShapeViewController.h */,
@@ -445,8 +447,6 @@
 				EE6EE27D1824C5DF0092A6B1 /* LMShowRouteViewController.m */,
 				905D8AB41824BFD700ED4601 /* LMResultViewController.h */,
 				905D8AB51824BFD700ED4601 /* LMResultViewController.m */,
-				900B8D3E181E58410019F732 /* LMDrawShapeView.h */,
-				900B8D3F181E58410019F732 /* LMDrawShapeView.m */,
 				909EB6361824DE60004EA734 /* LMData.h */,
 				909EB6371824DE60004EA734 /* LMData.m */,
 				909EB6E718251653004EA734 /* LMCustomSegue.h */,

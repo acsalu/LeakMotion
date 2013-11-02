@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <Accounts/Accounts.h>
+#import <MapKit/MapKit.h>
+#import <UIKit/UIKit.h>
 
 @class LMData;
 
@@ -26,6 +28,7 @@
 @property (strong, nonatomic) UIImage *profilePic;
 @property (strong, nonatomic) NSString *facebookId;
 @property (weak, nonatomic) id<LMDataDelegate> delegate;
+@property (strong, nonatomic) MKMapView *mapView;
 
 + (LMData *)sharedData;
 - (void)facebook;

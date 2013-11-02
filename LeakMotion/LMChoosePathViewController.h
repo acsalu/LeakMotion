@@ -16,7 +16,7 @@
 
 
 @property (strong, nonatomic) CLLocationManager *locationManager;
-@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) MKMapView *mapView;
 @property (nonatomic) CLLocationCoordinate2D currentCoordinate;
 @property (weak, nonatomic) IBOutlet UIButton *dismissButton;
 @property (weak, nonatomic) IBOutlet FUIButton *startRunningButton;

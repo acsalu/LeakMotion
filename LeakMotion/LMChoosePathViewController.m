@@ -82,12 +82,16 @@
     [_startRunningButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
     
     
+    self.mapView = [LMData sharedData].mapView;
+    [self.view addSubview:self.mapView];
+    self.mapView.delegate = self;
+
+    
     //test loc1 and loc2;
     CLLocation *loc1 = [[CLLocation alloc] initWithLatitude:40.148767 longitude:-102.919922];
     CLLocation *loc2 = [[CLLocation alloc] initWithLatitude:40.076627 longitude:-101.876221];
     [self animatePathOnMapWith:loc1 and:loc2];
     
-
     
 }
 
