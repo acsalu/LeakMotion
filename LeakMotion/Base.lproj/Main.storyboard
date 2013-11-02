@@ -122,13 +122,6 @@
                                     <action selector="showPath:" destination="f7T-hb-fTS" eventType="touchUpInside" id="LqD-Ez-rzr"/>
                                 </connections>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="PrF-9a-gMa">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="371"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <outlet property="delegate" destination="f7T-hb-fTS" id="Pjm-J0-DZy"/>
-                                </connections>
-                            </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phb-Fg-M3O">
                                 <rect key="frame" x="6" y="20" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -192,7 +185,6 @@
                     <navigationItem key="navigationItem" title="Choose Path" id="qIt-qn-exd"/>
                     <connections>
                         <outlet property="dismissButton" destination="phb-Fg-M3O" id="3Zv-z5-CbD"/>
-                        <outlet property="mapView" destination="PrF-9a-gMa" id="3bb-LR-jyX"/>
                         <outlet property="startRunningButton" destination="Oij-Lu-NKl" id="Q9Y-J2-Kia"/>
                         <segue destination="LWQ-wc-MpP" kind="custom" identifier="StartRunning" customClass="LMCustomSegue" id="Byl-rY-kJF"/>
                     </connections>
@@ -212,10 +204,48 @@
                     <view key="view" contentMode="scaleToFill" id="gDS-7J-dxl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="speed-icon" translatesAutoresizingMaskIntoConstraints="NO" id="XTL-5l-KD3">
+                                <rect key="frame" x="22" y="377" width="19" height="19"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="timer-icon" translatesAutoresizingMaskIntoConstraints="NO" id="PfS-YO-I0x">
+                                <rect key="frame" x="21" y="455" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="16Min 23Sec" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zta-MI-sdD">
+                                <rect key="frame" x="49" y="450" width="236" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="16.7 KM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKK-a9-Zt4">
+                                <rect key="frame" x="49" y="412" width="236" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9.2 m/s" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7g-yW-2FR">
+                                <rect key="frame" x="49" y="372" width="236" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mileage-icon" translatesAutoresizingMaskIntoConstraints="NO" id="mnh-7a-aF9">
+                                <rect key="frame" x="21" y="417" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Start Running" id="Geo-RW-2oq"/>
                     <connections>
+                        <outlet property="averageSpeedIcon" destination="XTL-5l-KD3" id="bVO-CJ-GJp"/>
+                        <outlet property="averageSpeedLabel" destination="V7g-yW-2FR" id="iOY-aE-mAQ"/>
+                        <outlet property="ranDistanceIcon" destination="mnh-7a-aF9" id="uYU-j1-LDK"/>
+                        <outlet property="ranDistanceLabel" destination="cKK-a9-Zt4" id="5pC-dw-pxM"/>
+                        <outlet property="timerIcon" destination="PfS-YO-I0x" id="JyI-7x-aiX"/>
+                        <outlet property="timerLabel" destination="zta-MI-sdD" id="VNy-gX-K7M"/>
                         <segue destination="O1j-7h-T7E" kind="modal" identifier="ViewResult" id="pQH-19-H8b"/>
                     </connections>
                 </viewController>
@@ -343,6 +373,9 @@
         <image name="compass" width="50" height="50"/>
         <image name="facebook-icon" width="40" height="40"/>
         <image name="heart-icon" width="80" height="80"/>
+        <image name="mileage-icon" width="30" height="30"/>
+        <image name="speed-icon" width="64" height="64"/>
+        <image name="timer-icon" width="28" height="29"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

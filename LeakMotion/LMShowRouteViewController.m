@@ -14,6 +14,7 @@
 @interface LMShowRouteViewController ()
 
 - (void)giveUP:(id)sender;
+- (void)setRunningInfoControlsHidden:(BOOL)hidden;
 
 @end
 
@@ -44,18 +45,8 @@
     //init views
     _mapView = [LMData sharedData].mapView;
     [self.view addSubview:_mapView];
-    _AverageSpeedLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 380, 320, 84)];
-    [_AverageSpeedLabel setText:@"Your current speed is 0 km, \n you're a noob"];
-    [self.view addSubview:_AverageSpeedLabel];
-    _ranDistanceLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 484, 320, 84)];
-    [_ranDistanceLabel setText:@"You've ran 0 km, you're a noob."];
-    [self.view addSubview:_ranDistanceLabel];
-    _startRunButton = [[UIButton alloc]initWithFrame:CGRectMake(250, 400, 70, 70)];
-    [_startRunButton setBackgroundColor:[UIColor redColor]];
-    [_startRunButton setTitle:@"Run!!!" forState:UIControlStateNormal];
-    [_startRunButton addTarget:self action:@selector(startRunning:)  forControlEvents:UIControlEventTouchUpInside];
+    
 
-    [self.view addSubview:_startRunButton];
     
     
     //turn into NO after drowing route,
@@ -75,21 +66,28 @@
 
     [_mapView setUserTrackingMode:MKUserTrackingModeFollowWithHeading animated:YES];
     
-    FUIButton *doneButton = [[FUIButton alloc] initWithFrame:CGRectMake(50, 496, 220, 52)];
+    _doneButton = [[FUIButton alloc] initWithFrame:CGRectMake(50, 496, 220, 52)];
     
-    doneButton.buttonColor = [UIColor turquoiseColor];
-    doneButton.shadowColor = [UIColor greenColor];
-    doneButton.shadowHeight = 0.0f;
-    doneButton.cornerRadius = 6.0f;
-    doneButton.titleLabel.font = [UIFont boldFlatFontOfSize:16];
-    [doneButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
-    [doneButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
+    _doneButton.buttonColor = [UIColor turquoiseColor];
+    _doneButton.shadowColor = [UIColor greenColor];
+    _doneButton.shadowHeight = 0.0f;
+    _doneButton.cornerRadius = 6.0f;
+    _doneButton.titleLabel.font = [UIFont boldFlatFontOfSize:16];
+    [_doneButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
+    [_doneButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
     
-    [doneButton setTitle:@"Give Up" forState:UIControlStateNormal];
-    [doneButton addTarget:self action:@selector(giveUP:) forControlEvents:UIControlEventTouchUpInside];
+    [_doneButton setTitle:@"Give Up" forState:UIControlStateNormal];
+    [_doneButton addTarget:self action:@selector(giveUP:) forControlEvents:UIControlEventTouchUpInside];
     
-    [self.view addSubview:doneButton];
+    [self.view addSubview:_doneButton];
     
+    
+    [self setRunningInfoControlsHidden:YES];
+    
+    
+    
+    self.countDownTime = 3;
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(countDown) userInfo:nil repeats:YES];
     
 }
 
@@ -99,6 +97,104 @@
         [self dismissViewControllerAnimated:NO completion:nil];
     }
 }
+
+- (void)countDown
+{
+    if (self.countDownTime == 0) {
+        NSLog(@"GO!");
+        [self.timer invalidate];
+        
+        UIImageView *countDownImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"countdowngo", self.countDownTime]]];
+        countDownImageView.center = CGPointMake(160, 270);
+        [self.view addSubview:countDownImageView];
+        
+        countDownImageView.transform = CGAffineTransformMakeScale(3.3, 3.3);
+        [UIView animateWithDuration:0.7 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            // animate it to the identity transform (100% scale)
+            countDownImageView.transform = CGAffineTransformIdentity;
+        } completion:^(BOOL finished){
+            // if you want to do something once the animation finishes, put it here
+
+            
+            double delayInSeconds = 0.6;
+            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+            dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+                [countDownImageView removeFromSuperview];
+                [self setRunningInfoControlsHidden:NO];
+                [self startRunning];
+            });
+        }];
+        
+        
+    } else {
+        NSLog(@"%d", self.countDownTime);
+        UIImageView *countDownImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"countdown%d", self.countDownTime]]];
+        countDownImageView.center = CGPointMake(160, 270);
+        [self.view addSubview:countDownImageView];
+
+        countDownImageView.transform = CGAffineTransformMakeScale(3.3, 3.3);
+        [UIView animateWithDuration:0.7 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            // animate it to the identity transform (100% scale)
+            countDownImageView.transform = CGAffineTransformIdentity;
+        } completion:^(BOOL finished){
+            // if you want to do something once the animation finishes, put it here
+            [countDownImageView removeFromSuperview];
+        }];
+        
+        --self.countDownTime;
+
+    }
+}
+
+- (void)setRunningInfoControlsHidden:(BOOL)hidden
+{
+    _doneButton.hidden = hidden;
+    
+    _averageSpeedLabel.hidden = hidden;
+    _ranDistanceLabel.hidden = hidden;
+    _timerLabel.hidden = hidden;
+    
+    _averageSpeedIcon.hidden = hidden;
+    _ranDistanceIcon.hidden = hidden;
+    _timerIcon.hidden = hidden;
+
+}
+
+- (void)startRunning
+{
+    NSLog(@"start button pressed");
+    _startTime = CACurrentMediaTime();
+    NSLog(@"start time = %f", _startTime);
+    
+    
+    _startDate = [NSDate date];
+    _dateFormatter = [[NSDateFormatter alloc] init];
+    
+    [_dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:8.0]];
+    _timer = [NSTimer scheduledTimerWithTimeInterval:1.0/24.0
+                                              target:self
+                                            selector:@selector(updateTimerLabel)
+                                            userInfo:nil repeats:YES];
+}
+
+- (void)updateTimerLabel
+{
+    NSDate *currentDate = [NSDate date];
+    NSTimeInterval timeInterval = [currentDate timeIntervalSinceDate:_startDate];
+    if (timeInterval >= 60.0f) {
+        [_dateFormatter setDateFormat:@"m:ss.SS "];
+    } else {
+        [_dateFormatter setDateFormat:@"ss.SS "];
+    }
+    
+    NSDate *timerDate = [NSDate dateWithTimeIntervalSince1970:timeInterval];
+    
+    NSString *timeString=[_dateFormatter stringFromDate:timerDate];
+    _timerLabel.text = timeString;
+}
+
+
+
 
 - (IBAction)drawRouteWithJSONArray:(NSArray *)array{
     
@@ -140,12 +236,6 @@
 
 }
 
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 -(IBAction)zoomIn:(id)sender{
@@ -211,7 +301,7 @@
     NSLog(@"in did Update location");
     
     CLLocation *location = [locations lastObject];
-    //[_AverageSpeedLabel setText:[NSString stringWithFormat:@"%f", location.coordinate.latitude]];
+    //[_averageSpeedLabel setText:[NSString stringWithFormat:@"%f", location.coordinate.latitude]];
     
     // if it's the first time to start the run, theres no previous location
     if (self.previousLocation.coordinate.latitude == 0) {
@@ -228,7 +318,7 @@
         //draw path.
         [self drawRanRouteWith:self.previousLocation and:self.currentLocation];
         //calculate distance and show it.
-        [_AverageSpeedLabel setText:[[self getAverageSpeed] stringValue] ];
+        [_averageSpeedLabel setText:[NSString stringWithFormat:@"%.2f m/s", self.averageSpeed]];
         //calculate current sum distance
         [_ranDistanceLabel setText:[[self getTotalRanLength] stringValue]];
         
@@ -254,24 +344,13 @@
 }
 
 
-- (void)startRunning:(id)startButton{
-    
-    NSLog(@"start button pressed");
-    _startTime = CACurrentMediaTime();
-    NSLog(@"start time = %f", _startTime);
-    
-}
 
-- (NSNumber*)getAverageSpeed{
+
+- (float)averageSpeed{
     
-    double totalTime = CACurrentMediaTime() - _startTime;
-    double averageSpeed = [[self getTotalRanLength] floatValue]/ totalTime;
-    NSString* formattedNumber = [NSString stringWithFormat:@"%.02f", averageSpeed];
-    NSNumberFormatter *nf = [[NSNumberFormatter alloc] init];
-    [nf setNumberStyle:NSNumberFormatterDecimalStyle];
-    NSNumber *myNumber = [nf numberFromString:formattedNumber];
-    return myNumber;
-    
+    float totalTime = CACurrentMediaTime() - _startTime;
+    float averageSpeed = [[self getTotalRanLength] floatValue]/ totalTime;
+    return averageSpeed;
 }
 
 @end
