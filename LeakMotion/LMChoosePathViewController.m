@@ -7,10 +7,8 @@
 //
 
 #import "LMChoosePathViewController.h"
-#import <AFNetworking/AFNetworking.h>
-#import <FlatUIKit/FlatUIKit.h>
-#import <FlatUIKit/FUIButton.h>
-#import <FlatUIKit/UIColor+FlatUI.h>
+#import "AFNetworking.h"
+#import "FlatUIKit.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface LMChoosePathViewController ()
@@ -32,9 +30,16 @@
     self.dismissButton.layer.cornerRadius = 3;
     self.dismissButton.layer.borderColor = [[UIColor colorWithRed:0 green:122/255.0 blue:255/255.0 alpha:1.0f] CGColor];
 
-    self.startRunningButton.layer.backgroundColor = [[UIColor greenColor] CGColor];
-    self.startRunningButton.layer.cornerRadius = 3;
+//    self.startRunningButton.layer.backgroundColor = [[UIColor greenColor] CGColor];
+//    self.startRunningButton.layer.cornerRadius = 3;
 
+    _startRunningButton.buttonColor = [UIColor turquoiseColor];
+    _startRunningButton.shadowColor = [UIColor greenColor];
+    _startRunningButton.shadowHeight = 0.0f;
+    _startRunningButton.cornerRadius = 6.0f;
+    _startRunningButton.titleLabel.font = [UIFont boldFlatFontOfSize:16];
+    [_startRunningButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
+    [_startRunningButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
     
 }
 
