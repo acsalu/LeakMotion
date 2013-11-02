@@ -13,6 +13,7 @@
 <MKMapViewDelegate>
 
 @property(strong, nonatomic) MKMapView *mapView;
+@property(nonatomic)BOOL willDismiss;
 
 
 - (IBAction)zoomIn:(id)sender;

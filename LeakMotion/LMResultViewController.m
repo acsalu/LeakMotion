@@ -44,39 +44,39 @@
 
 - (IBAction)shareToFacebook:(id)sender
 {
-    NSLog(@"Share to Facebook");
-    if ([LMData sharedData].accountStore) {
-        NSDictionary *parameters = @{@"message": @"Y!Hack", ACFacebookAppIdKey: @"232104906954589"};
-        SLRequest *facebookRequest =
-        [SLRequest requestForServiceType:SLServiceTypeFacebook
-                           requestMethod:SLRequestMethodPOST
-                        URL:[NSURL URLWithString:@"https://graph.facebook.com/me/photos"]
-                              parameters:parameters];
-        NSData *data = UIImagePNGRepresentation([UIImage imageNamed:@"fake-map"]);
-        
-        [facebookRequest addMultipartData:data
-                                 withName:@"media"
-                                     type:@"multipart/form-data"
-                                 filename:@"leakmotion.jpg"];
-        facebookRequest.account = [LMData sharedData].facebookAccount;
-        
-        [facebookRequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
-            if (!error) {
-                NSLog(@"Post successful!");
-            } else {
-                
-            }
-        }];
-        
-    } else {
-        NSLog(@"No Facebook yet.");
-    }
-    
+//    NSLog(@"Share to Facebook");
+//    if ([LMData sharedData].accountStore) {
+//        NSDictionary *parameters = @{@"message": @"Y!Hack", ACFacebookAppIdKey: @"232104906954589"};
+//        SLRequest *facebookRequest =
+//        [SLRequest requestForServiceType:SLServiceTypeFacebook
+//                           requestMethod:SLRequestMethodPOST
+//                        URL:[NSURL URLWithString:@"https://graph.facebook.com/me/photos"]
+//                              parameters:parameters];
+//        NSData *data = UIImagePNGRepresentation([UIImage imageNamed:@"fake-map"]);
+//        
+//        [facebookRequest addMultipartData:data
+//                                 withName:@"media"
+//                                     type:@"multipart/form-data"
+//                                 filename:@"leakmotion.jpg"];
+//        facebookRequest.account = [LMData sharedData].facebookAccount;
+//        
+//        [facebookRequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
+//            if (!error) {
+//                NSLog(@"Post successful!");
+//            } else {
+//                
+//            }
+//        }];
+//        
+//    } else {
+//        NSLog(@"No Facebook yet.");
+//    }
+
     
 }
 
 - (IBAction)backToLobby:(id)sender
 {
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

@@ -66,6 +66,7 @@
 		909EB6E41824F6DB004EA734 /* UITabBar+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 909EB6CF1824F6DB004EA734 /* UITabBar+FlatUI.m */; };
 		909EB6E51824F6DB004EA734 /* UITableViewCell+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 909EB6D11824F6DB004EA734 /* UITableViewCell+FlatUI.m */; };
 		909EB6E61824F6DB004EA734 /* UIToolbar+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 909EB6D31824F6DB004EA734 /* UIToolbar+FlatUI.m */; };
+		909EB6E918251653004EA734 /* LMCustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 909EB6E818251653004EA734 /* LMCustomSegue.m */; };
 		90E0445B181D4C5B006F3379 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E0445A181D4C5B006F3379 /* Foundation.framework */; };
 		90E0445D181D4C5B006F3379 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E0445C181D4C5B006F3379 /* CoreGraphics.framework */; };
 		90E0445F181D4C5B006F3379 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E0445E181D4C5B006F3379 /* UIKit.framework */; };
@@ -203,6 +204,8 @@
 		909EB6D11824F6DB004EA734 /* UITableViewCell+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+FlatUI.m"; sourceTree = "<group>"; };
 		909EB6D21824F6DB004EA734 /* UIToolbar+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIToolbar+FlatUI.h"; sourceTree = "<group>"; };
 		909EB6D31824F6DB004EA734 /* UIToolbar+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIToolbar+FlatUI.m"; sourceTree = "<group>"; };
+		909EB6E718251653004EA734 /* LMCustomSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMCustomSegue.h; sourceTree = "<group>"; };
+		909EB6E818251653004EA734 /* LMCustomSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMCustomSegue.m; sourceTree = "<group>"; };
 		90E04457181D4C5B006F3379 /* LeakMotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeakMotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E0445A181D4C5B006F3379 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		90E0445C181D4C5B006F3379 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -445,6 +448,8 @@
 				900B8D3F181E58410019F732 /* LMDrawShapeView.m */,
 				909EB6361824DE60004EA734 /* LMData.h */,
 				909EB6371824DE60004EA734 /* LMData.m */,
+				909EB6E718251653004EA734 /* LMCustomSegue.h */,
+				909EB6E818251653004EA734 /* LMCustomSegue.m */,
 				90E04472181D4C5B006F3379 /* Images.xcassets */,
 				909EB6391824E693004EA734 /* Unused */,
 				90E04461181D4C5B006F3379 /* Supporting Files */,
@@ -622,6 +627,7 @@
 				909EB6A81824F655004EA734 /* UIButton+AFNetworking.m in Sources */,
 				909EB69C1824F655004EA734 /* AFHTTPRequestOperation.m in Sources */,
 				909EB6E51824F6DB004EA734 /* UITableViewCell+FlatUI.m in Sources */,
+				909EB6E918251653004EA734 /* LMCustomSegue.m in Sources */,
 				900B8D43181E60440019F732 /* LMChooseShapeViewController.m in Sources */,
 				909EB6E01824F6DB004EA734 /* UIPopoverController+FlatUI.m in Sources */,
 				900B8D40181E58410019F732 /* LMDrawShapeView.m in Sources */,
