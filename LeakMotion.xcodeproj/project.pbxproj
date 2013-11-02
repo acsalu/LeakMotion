@@ -22,7 +22,6 @@
 		90550E14181E286B0011E327 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 90550E13181E286B0011E327 /* libz.dylib */; };
 		90550E16181E28720011E327 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90550E15181E28720011E327 /* OpenGLES.framework */; };
 		90550E18181E28790011E327 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90550E17181E28790011E327 /* SystemConfiguration.framework */; };
-		90550E1A181E29370011E327 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90550E19181E29370011E327 /* GoogleMaps.framework */; };
 		90550E1C181E29610011E327 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 90550E1B181E29610011E327 /* GoogleMaps.bundle */; };
 		90550E1F181E2A0A0011E327 /* LMMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90550E1E181E2A0A0011E327 /* LMMapViewController.m */; };
 		905D8AB01824BB2100ED4601 /* LMChoosePathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 905D8AAF1824BB2100ED4601 /* LMChoosePathViewController.m */; };
@@ -45,6 +44,7 @@
 		90E04484181D4C5B006F3379 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 90E04482181D4C5B006F3379 /* InfoPlist.strings */; };
 		90E04486181D4C5B006F3379 /* LeakMotionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E04485181D4C5B006F3379 /* LeakMotionTests.m */; };
 		CA1B6F857BBB4B8DA2EBBE6B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0277BE28632549D09E549599 /* libPods.a */; };
+		EE6EE27E1824C5DF0092A6B1 /* LMShowRouteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6EE27D1824C5DF0092A6B1 /* LMShowRouteViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +109,8 @@
 		90E04481181D4C5B006F3379 /* LeakMotionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LeakMotionTests-Info.plist"; sourceTree = "<group>"; };
 		90E04483181D4C5B006F3379 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		90E04485181D4C5B006F3379 /* LeakMotionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeakMotionTests.m; sourceTree = "<group>"; };
+		EE6EE27C1824C5DF0092A6B1 /* LMShowRouteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMShowRouteViewController.h; sourceTree = "<group>"; };
+		EE6EE27D1824C5DF0092A6B1 /* LMShowRouteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMShowRouteViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +134,6 @@
 				90550E02181E23160011E327 /* QuartzCore.framework in Frameworks */,
 				90E0445D181D4C5B006F3379 /* CoreGraphics.framework in Frameworks */,
 				90E0445F181D4C5B006F3379 /* UIKit.framework in Frameworks */,
-				90550E1A181E29370011E327 /* GoogleMaps.framework in Frameworks */,
 				90E0445B181D4C5B006F3379 /* Foundation.framework in Frameworks */,
 				CA1B6F857BBB4B8DA2EBBE6B /* libPods.a in Frameworks */,
 			);
@@ -223,6 +224,8 @@
 				90E04470181D4C5B006F3379 /* LMViewController.m */,
 				90E04472181D4C5B006F3379 /* Images.xcassets */,
 				90E04461181D4C5B006F3379 /* Supporting Files */,
+				EE6EE27C1824C5DF0092A6B1 /* LMShowRouteViewController.h */,
+				EE6EE27D1824C5DF0092A6B1 /* LMShowRouteViewController.m */,
 			);
 			path = LeakMotion;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 			files = (
 				900B8D43181E60440019F732 /* LMChooseShapeViewController.m in Sources */,
 				900B8D40181E58410019F732 /* LMDrawShapeView.m in Sources */,
+				EE6EE27E1824C5DF0092A6B1 /* LMShowRouteViewController.m in Sources */,
 				90E04467181D4C5B006F3379 /* main.m in Sources */,
 				905D8AB31824BB5100ED4601 /* LMLocationManager.m in Sources */,
 				905D8AB01824BB2100ED4601 /* LMChoosePathViewController.m in Sources */,

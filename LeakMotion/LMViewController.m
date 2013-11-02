@@ -48,6 +48,14 @@ constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
 } success:^(AFHTTPRequestOperation *operation, id responseObject) {
     NSString *response = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
     NSLog(@"[response] %@", response);
+    NSError *e = nil;
+    NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:&e];
+    NSLog(@"Miles is here :p");
+    NSLog(@"jsonArray - %@", jsonArray);
+    NSLog(@"class of object inside is type of class - %@", [[jsonArray[0] class] description] );
+    NSLog(@" the thing inside inside is %@", jsonArray[0][0] );
+    
+    
 } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
     NSLog(@"[fail %@]", error);
 }];
