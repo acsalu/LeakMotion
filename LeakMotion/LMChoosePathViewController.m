@@ -9,6 +9,8 @@
 #import "LMChoosePathViewController.h"
 #import <AFNetworking/AFNetworking.h>
 #import <FlatUIKit/FlatUIKit.h>
+#import <FlatUIKit/FUIButton.h>
+#import <FlatUIKit/UIColor+FlatUI.h>
 #import <QuartzCore/QuartzCore.h>
 
 @interface LMChoosePathViewController ()
@@ -30,6 +32,10 @@
     self.dismissButton.layer.cornerRadius = 3;
     self.dismissButton.layer.borderColor = [[UIColor colorWithRed:0 green:122/255.0 blue:255/255.0 alpha:1.0f] CGColor];
 
+    self.startRunningButton.layer.backgroundColor = [[UIColor greenColor] CGColor];
+    self.startRunningButton.layer.cornerRadius = 3;
+
+    
 }
 
 - (void)fetchPath
@@ -47,6 +53,24 @@
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"[fail %@]", error);
     }];
+}
+
+#pragma mark - IBActions
+
+
+- (IBAction)showPath:(id)sender
+{
+}
+
+- (IBAction)backToLobby:(id)sender
+{
+    NSLog(@"back to lobby");
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)startRunning:(id)sender
+{
+    [self performSegueWithIdentifier:@"StartRunning" sender:self];
 }
 
 #pragma mark - CLLocationManagerDelegate methods
@@ -72,12 +96,4 @@
 }
 
 
-- (IBAction)showPath:(id)sender {
-}
-
-- (IBAction)backToLobby:(id)sender
-{
-    NSLog(@"back to lobby");
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
 @end
