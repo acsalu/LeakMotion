@@ -19,7 +19,7 @@
 @property (nonatomic) CLLocationCoordinate2D currentCoordinate;
 @property (weak, nonatomic) IBOutlet UIButton *dismissButton;
 
-@property (weak, nonatomic) IBOutlet UIButton *startRunningButton;
+@property (weak, nonatomic) IBOutlet FUIButton *startRunningButton;
 
 
 

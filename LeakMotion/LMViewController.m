@@ -8,7 +8,7 @@
 
 #import "LMViewController.h"
 #import <QuartzCore/QuartzCore.h>
-#import <AFNetworking/AFNetworking.h>
+#import "AFNetworking.h"
 
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
 

@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LMData.h"
 
-@interface LMLobbyViewController : UIViewController
+@class AGMedallionView;
 
+@interface LMLobbyViewController : UIViewController<LMDataDelegate>
+
+@property (weak, nonatomic) IBOutlet UIButton *pickPathButton;
+@property (strong, nonatomic) AGMedallionView *medallionView;
+@property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
 
 @end
