@@ -71,6 +71,14 @@
 //        self.profilePic = [UIImage imageWithData:[NSData dataWithContentsOfURL:url]];
 
     }];
-    
 }
+
+- (MKMapView *)mapView
+{
+    if (!_mapView)
+        _mapView = [[MKMapView alloc] initWithFrame:CGRectMake(0, 0, 320, 370)];
+
+    return _mapView;
+}
+
 @end

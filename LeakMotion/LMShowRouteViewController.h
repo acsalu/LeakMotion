@@ -13,7 +13,7 @@
 @interface LMShowRouteViewController : UIViewController
 <MKMapViewDelegate,CLLocationManagerDelegate>
 
-@property(strong, nonatomic) MKMapView *mapView;
+@property(weak, nonatomic) MKMapView *mapView;
 @property(nonatomic)BOOL willDismiss;
 @property(strong, nonatomic) UILabel *AverageSpeedLabel;
 @property(strong, nonatomic) UILabel *ranDistanceLabel;

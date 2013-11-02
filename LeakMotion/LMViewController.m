@@ -41,7 +41,7 @@ NSString *kRotationDirectionCounterClockwise = @"counterclockwise";
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     NSDictionary *prams = @{@"map":@"Acsa is very handsome."};
-    [manager POST:@"http://leakmotion-dev.herokuapp.com/"
+    [manager POST:@"http://10.0.1.7:5000/"
        parameters:prams
 constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
     

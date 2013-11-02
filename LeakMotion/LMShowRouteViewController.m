@@ -9,6 +9,7 @@
 #import "LMShowRouteViewController.h"
 #import "FlatUIKit.h"
 #import "LMResultViewController.h"
+#import "LMData.h"
 
 @interface LMShowRouteViewController ()
 
@@ -41,9 +42,9 @@
     //NSLog(@"the previous lon before anything %f", self.previousLocation.coordinate.longitude);
     
     //init views
-    _mapView = [[MKMapView alloc]initWithFrame:CGRectMake(0, 0, 320, 400)];
+    _mapView = [LMData sharedData].mapView;
     [self.view addSubview:_mapView];
-    _AverageSpeedLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 400, 320, 84)];
+    _AverageSpeedLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 380, 320, 84)];
     [_AverageSpeedLabel setText:@"Your current speed is 0 km, \n you're a noob"];
     [self.view addSubview:_AverageSpeedLabel];
     _ranDistanceLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 484, 320, 84)];
@@ -64,11 +65,15 @@
     _mapView.delegate = self;
     [_mapView setNeedsDisplay];
     _mapView.showsUserLocation = YES;
+
     [self zoomIn:NULL];
     
     _locationManager = [[CLLocationManager alloc] init];
     _locationManager.delegate = self;
     [_locationManager startUpdatingLocation];
+    [_locationManager startUpdatingHeading];
+
+    [_mapView setUserTrackingMode:MKUserTrackingModeFollowWithHeading animated:YES];
     
     FUIButton *doneButton = [[FUIButton alloc] initWithFrame:CGRectMake(50, 496, 220, 52)];
     
@@ -184,7 +189,8 @@
 - (void)giveUP:(id)sender
 {
     NSLog(@"give up haha");
-    
+    [self.locationManager stopUpdatingLocation];
+    [self.locationManager stopUpdatingHeading];
     [self performSegueWithIdentifier:@"ViewResult" sender:self];
     
 }

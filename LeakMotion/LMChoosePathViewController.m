@@ -10,6 +10,7 @@
 #import "AFNetworking.h"
 #import "FlatUIKit.h"
 #import <QuartzCore/QuartzCore.h>
+#import "LMData.h"
 
 @interface LMChoosePathViewController ()
 
@@ -40,6 +41,10 @@
     _startRunningButton.titleLabel.font = [UIFont boldFlatFontOfSize:16];
     [_startRunningButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
     [_startRunningButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
+    
+    self.mapView = [LMData sharedData].mapView;
+    [self.view addSubview:self.mapView];
+    self.mapView.delegate = self;
     
 }
 

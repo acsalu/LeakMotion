@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 @class FUIButton;
 
 @interface LMResultViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet FUIButton *facebookShareButton;
 @property (weak, nonatomic) IBOutlet FUIButton *doneButton;
+@property (weak, nonatomic) MKMapView *mapView;
 
 - (IBAction)shareToFacebook:(id)sender;
 - (IBAction)backToLobby:(id)sender;
