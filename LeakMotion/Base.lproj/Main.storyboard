@@ -122,13 +122,6 @@
                                     <action selector="showPath:" destination="f7T-hb-fTS" eventType="touchUpInside" id="LqD-Ez-rzr"/>
                                 </connections>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="PrF-9a-gMa">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="371"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <outlet property="delegate" destination="f7T-hb-fTS" id="Pjm-J0-DZy"/>
-                                </connections>
-                            </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phb-Fg-M3O">
                                 <rect key="frame" x="6" y="20" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -192,7 +185,6 @@
                     <navigationItem key="navigationItem" title="Choose Path" id="qIt-qn-exd"/>
                     <connections>
                         <outlet property="dismissButton" destination="phb-Fg-M3O" id="3Zv-z5-CbD"/>
-                        <outlet property="mapView" destination="PrF-9a-gMa" id="3bb-LR-jyX"/>
                         <outlet property="startRunningButton" destination="Oij-Lu-NKl" id="Q9Y-J2-Kia"/>
                         <segue destination="LWQ-wc-MpP" kind="custom" identifier="StartRunning" customClass="LMCustomSegue" id="Byl-rY-kJF"/>
                     </connections>
