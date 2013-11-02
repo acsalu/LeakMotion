@@ -24,6 +24,11 @@
 		90550E18181E28790011E327 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90550E17181E28790011E327 /* SystemConfiguration.framework */; };
 		90550E1C181E29610011E327 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 90550E1B181E29610011E327 /* GoogleMaps.bundle */; };
 		90550E1F181E2A0A0011E327 /* LMMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90550E1E181E2A0A0011E327 /* LMMapViewController.m */; };
+		905D8AB01824BB2100ED4601 /* LMChoosePathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 905D8AAF1824BB2100ED4601 /* LMChoosePathViewController.m */; };
+		905D8AB31824BB5100ED4601 /* LMLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 905D8AB21824BB5100ED4601 /* LMLocationManager.m */; };
+		905D8AB61824BFD700ED4601 /* LMResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 905D8AB51824BFD700ED4601 /* LMResultViewController.m */; };
+		905D8AB81824C0D200ED4601 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 905D8AB71824C0D200ED4601 /* Social.framework */; };
+		905D8ABB1824C2E600ED4601 /* LMLobbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 905D8ABA1824C2E600ED4601 /* LMLobbyViewController.m */; };
 		90E0445B181D4C5B006F3379 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E0445A181D4C5B006F3379 /* Foundation.framework */; };
 		90E0445D181D4C5B006F3379 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E0445C181D4C5B006F3379 /* CoreGraphics.framework */; };
 		90E0445F181D4C5B006F3379 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E0445E181D4C5B006F3379 /* UIKit.framework */; };
@@ -76,6 +81,15 @@
 		90550E1B181E29610011E327 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		90550E1D181E2A0A0011E327 /* LMMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMMapViewController.h; sourceTree = "<group>"; };
 		90550E1E181E2A0A0011E327 /* LMMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMMapViewController.m; sourceTree = "<group>"; };
+		905D8AAE1824BB2100ED4601 /* LMChoosePathViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMChoosePathViewController.h; sourceTree = "<group>"; };
+		905D8AAF1824BB2100ED4601 /* LMChoosePathViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMChoosePathViewController.m; sourceTree = "<group>"; };
+		905D8AB11824BB5100ED4601 /* LMLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMLocationManager.h; sourceTree = "<group>"; };
+		905D8AB21824BB5100ED4601 /* LMLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMLocationManager.m; sourceTree = "<group>"; };
+		905D8AB41824BFD700ED4601 /* LMResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMResultViewController.h; sourceTree = "<group>"; };
+		905D8AB51824BFD700ED4601 /* LMResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMResultViewController.m; sourceTree = "<group>"; };
+		905D8AB71824C0D200ED4601 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		905D8AB91824C2E600ED4601 /* LMLobbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMLobbyViewController.h; sourceTree = "<group>"; };
+		905D8ABA1824C2E600ED4601 /* LMLobbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMLobbyViewController.m; sourceTree = "<group>"; };
 		90E04457181D4C5B006F3379 /* LeakMotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeakMotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E0445A181D4C5B006F3379 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		90E0445C181D4C5B006F3379 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -104,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				905D8AB81824C0D200ED4601 /* Social.framework in Frameworks */,
 				900B8D3D181E53FD0019F732 /* MapKit.framework in Frameworks */,
 				90550E18181E28790011E327 /* SystemConfiguration.framework in Frameworks */,
 				90550E16181E28720011E327 /* OpenGLES.framework in Frameworks */,
@@ -160,6 +175,7 @@
 		90E04459181D4C5B006F3379 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				905D8AB71824C0D200ED4601 /* Social.framework */,
 				900B8D3C181E53FD0019F732 /* MapKit.framework */,
 				90550E1B181E29610011E327 /* GoogleMaps.bundle */,
 				90550E19181E29370011E327 /* GoogleMaps.framework */,
@@ -190,14 +206,22 @@
 				90E04469181D4C5B006F3379 /* LMAppDelegate.h */,
 				90E0446A181D4C5B006F3379 /* LMAppDelegate.m */,
 				90E0446C181D4C5B006F3379 /* Main.storyboard */,
-				90E0446F181D4C5B006F3379 /* LMViewController.h */,
-				90E04470181D4C5B006F3379 /* LMViewController.m */,
+				905D8AB91824C2E600ED4601 /* LMLobbyViewController.h */,
+				905D8ABA1824C2E600ED4601 /* LMLobbyViewController.m */,
 				90550E1D181E2A0A0011E327 /* LMMapViewController.h */,
 				90550E1E181E2A0A0011E327 /* LMMapViewController.m */,
 				900B8D41181E60440019F732 /* LMChooseShapeViewController.h */,
 				900B8D42181E60440019F732 /* LMChooseShapeViewController.m */,
+				905D8AAE1824BB2100ED4601 /* LMChoosePathViewController.h */,
+				905D8AAF1824BB2100ED4601 /* LMChoosePathViewController.m */,
+				905D8AB41824BFD700ED4601 /* LMResultViewController.h */,
+				905D8AB51824BFD700ED4601 /* LMResultViewController.m */,
 				900B8D3E181E58410019F732 /* LMDrawShapeView.h */,
 				900B8D3F181E58410019F732 /* LMDrawShapeView.m */,
+				905D8AB11824BB5100ED4601 /* LMLocationManager.h */,
+				905D8AB21824BB5100ED4601 /* LMLocationManager.m */,
+				90E0446F181D4C5B006F3379 /* LMViewController.h */,
+				90E04470181D4C5B006F3379 /* LMViewController.m */,
 				90E04472181D4C5B006F3379 /* Images.xcassets */,
 				90E04461181D4C5B006F3379 /* Supporting Files */,
 				EE6EE27C1824C5DF0092A6B1 /* LMShowRouteViewController.h */,
@@ -373,9 +397,13 @@
 				900B8D40181E58410019F732 /* LMDrawShapeView.m in Sources */,
 				EE6EE27E1824C5DF0092A6B1 /* LMShowRouteViewController.m in Sources */,
 				90E04467181D4C5B006F3379 /* main.m in Sources */,
+				905D8AB31824BB5100ED4601 /* LMLocationManager.m in Sources */,
+				905D8AB01824BB2100ED4601 /* LMChoosePathViewController.m in Sources */,
 				90E0446B181D4C5B006F3379 /* LMAppDelegate.m in Sources */,
 				90550E1F181E2A0A0011E327 /* LMMapViewController.m in Sources */,
 				90E04471181D4C5B006F3379 /* LMViewController.m in Sources */,
+				905D8ABB1824C2E600ED4601 /* LMLobbyViewController.m in Sources */,
+				905D8AB61824BFD700ED4601 /* LMResultViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

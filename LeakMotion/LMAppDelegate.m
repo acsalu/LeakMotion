@@ -7,13 +7,12 @@
 //
 
 #import "LMAppDelegate.h"
-
+#import <FacebookSDK/Facebook.h>
 
 @implementation LMAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-
     return YES;
 }
 							
