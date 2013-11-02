@@ -45,13 +45,17 @@
     //init views
     
 
-    _mapView = [LMData sharedData].mapView;
-    _mapView.frame = CGRectMake(0, 0, 320, 568);
-    [self.view addSubview:_mapView];
+    [LMData sharedData].mapView = [LMData sharedData].mapView;
+    [LMData sharedData].mapView.frame = CGRectMake(0, 0, 320, 568);
+    [self.view addSubview:[LMData sharedData].mapView];
     
-    _mapView.delegate = self;
-    [_mapView setNeedsDisplay];
-    _mapView.showsUserLocation = YES;
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance( [[CLLocation alloc] initWithLatitude:25.057686 longitude:121.614532].coordinate, 100000, 100000);
+    
+    [[LMData sharedData].mapView setRegion:region animated:NO];
+    
+    [LMData sharedData].mapView.delegate = self;
+    [[LMData sharedData].mapView setNeedsDisplay];
+    [LMData sharedData].mapView.showsUserLocation = YES;
     
     //turn into NO after drowing route,
     self.drawRoute = YES;
@@ -64,7 +68,7 @@
     [_locationManager startUpdatingLocation];
     [_locationManager startUpdatingHeading];
 
-    [_mapView setUserTrackingMode:MKUserTrackingModeFollowWithHeading animated:YES];
+    [[LMData sharedData].mapView setUserTrackingMode:MKUserTrackingModeFollowWithHeading animated:YES];
     
     _doneButton = [[FUIButton alloc] initWithFrame:CGRectMake(50, 496, 220, 52)];
     
@@ -79,7 +83,7 @@
     [_doneButton setTitle:@"Give Up" forState:UIControlStateNormal];
     [_doneButton addTarget:self action:@selector(giveUP:) forControlEvents:UIControlEventTouchUpInside];
     
-    [self.view insertSubview:_doneButton belowSubview:self.mapView];
+    [self.view insertSubview:_doneButton belowSubview:[LMData sharedData].mapView];
     
     
     
@@ -118,7 +122,7 @@
             [self setRunningInfoControlsHidden:NO];
             [UIView animateWithDuration:0.6 animations:^{
                 CGRect frame = CGRectMake(0, 0, 320, 370);
-                self.mapView.frame = frame;
+                [LMData sharedData].mapView.frame = frame;
             } completion:^(BOOL finished) {
                 [countDownImageView removeFromSuperview];
 
@@ -227,7 +231,7 @@
     coords[ [array count] ] = firstCoord.coordinate;
     
     MKPolyline *route = [MKPolyline polylineWithCoordinates:coords count:[array count] + 1];
-    [_mapView addOverlay:route];
+    [[LMData sharedData].mapView addOverlay:route];
     
     
 }
@@ -242,7 +246,7 @@
     coords[0] = previousLocation.coordinate;
     coords[1] = currentLocation.coordinate;
     MKPolyline *line = [MKPolyline polylineWithCoordinates:coords count:2];
-    [_mapView addOverlay:line];
+    [[LMData sharedData].mapView addOverlay:line];
 
 }
 
@@ -250,9 +254,19 @@
 
 -(IBAction)zoomIn:(id)sender{
 
-    MKUserLocation *userLocation = _mapView.userLocation;
+//    MKCoordinateRegion region;
+//    //Set Zoom level using Span
+//    MKCoordinateSpan span;
+//    region.center = [LMData sharedData].mapView.region.center;
+//    
+//    span.latitudeDelta = [LMData sharedData].mapView.region.span.latitudeDelta / 2.0002;
+//    span.longitudeDelta = [LMData sharedData].mapView.region.span.longitudeDelta / 2.0002;
+//    region.span = span;
+//    [[LMData sharedData].mapView setRegion:region animated:YES];
+    
+    MKUserLocation *userLocation = [LMData sharedData].mapView.userLocation;
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance( [[CLLocation alloc] initWithLatitude:25.057686 longitude:121.614532].coordinate, 1000, 1000);
-    [_mapView setRegion:region];
+    [[LMData sharedData].mapView setRegion:region animated:YES];
     
 }
 
@@ -341,8 +355,8 @@
     
     //NSString *currentSpeed = [NSString stringWithFormat:@"%f", location.speed];
     
-    //MKCoordinateRegion region = [self.mapView regionThatFits:MKCoordinateRegionMakeWithDistance(startCoord, 800, 800)];
-    //[self.mapView setRegion:region animated:YES];
+    //MKCoordinateRegion region = [[LMData sharedData].mapView regionThatFits:MKCoordinateRegionMakeWithDistance(startCoord, 800, 800)];
+    //[[LMData sharedData].mapView setRegion:region animated:YES];
 }
 
 - (NSNumber*)getTotalRanLength{

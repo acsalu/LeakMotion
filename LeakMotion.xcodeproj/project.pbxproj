@@ -67,6 +67,7 @@
 		909EB6E51824F6DB004EA734 /* UITableViewCell+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 909EB6D11824F6DB004EA734 /* UITableViewCell+FlatUI.m */; };
 		909EB6E61824F6DB004EA734 /* UIToolbar+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 909EB6D31824F6DB004EA734 /* UIToolbar+FlatUI.m */; };
 		909EB6E918251653004EA734 /* LMCustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 909EB6E818251653004EA734 /* LMCustomSegue.m */; };
+		909EB6EC182572F1004EA734 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 909EB6EB182572F1004EA734 /* MBProgressHUD.m */; };
 		90E0445B181D4C5B006F3379 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E0445A181D4C5B006F3379 /* Foundation.framework */; };
 		90E0445D181D4C5B006F3379 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E0445C181D4C5B006F3379 /* CoreGraphics.framework */; };
 		90E0445F181D4C5B006F3379 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E0445E181D4C5B006F3379 /* UIKit.framework */; };
@@ -206,6 +207,8 @@
 		909EB6D31824F6DB004EA734 /* UIToolbar+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIToolbar+FlatUI.m"; sourceTree = "<group>"; };
 		909EB6E718251653004EA734 /* LMCustomSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMCustomSegue.h; sourceTree = "<group>"; };
 		909EB6E818251653004EA734 /* LMCustomSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMCustomSegue.m; sourceTree = "<group>"; };
+		909EB6EA182572F1004EA734 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		909EB6EB182572F1004EA734 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		90E04457181D4C5B006F3379 /* LeakMotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeakMotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E0445A181D4C5B006F3379 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		90E0445C181D4C5B006F3379 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -381,6 +384,15 @@
 			path = FlatUIKit;
 			sourceTree = "<group>";
 		};
+		909EB6ED182572F5004EA734 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				909EB6EA182572F1004EA734 /* MBProgressHUD.h */,
+				909EB6EB182572F1004EA734 /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 		90E0444E181D4C5B006F3379 = {
 			isa = PBXGroup;
 			children = (
@@ -404,6 +416,7 @@
 		90E04459181D4C5B006F3379 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				909EB6ED182572F5004EA734 /* MBProgressHUD */,
 				909EB6AC1824F6DB004EA734 /* FlatUIKit */,
 				909EB6781824F655004EA734 /* AFNetworking */,
 				909EB68C1824F655004EA734 /* UIKit+AFNetworking */,
@@ -633,6 +646,7 @@
 				909EB6E11824F6DB004EA734 /* UIProgressView+FlatUI.m in Sources */,
 				909EB6A81824F655004EA734 /* UIButton+AFNetworking.m in Sources */,
 				909EB69C1824F655004EA734 /* AFHTTPRequestOperation.m in Sources */,
+				909EB6EC182572F1004EA734 /* MBProgressHUD.m in Sources */,
 				909EB6E51824F6DB004EA734 /* UITableViewCell+FlatUI.m in Sources */,
 				909EB6E918251653004EA734 /* LMCustomSegue.m in Sources */,
 				900B8D43181E60440019F732 /* LMChooseShapeViewController.m in Sources */,

@@ -11,6 +11,7 @@
 #import "LMData.h"
 #import <Social/Social.h>
 #import "LMData.h"
+#import "MBProgressHUD.h"
 
 @interface LMResultViewController ()
 
@@ -70,6 +71,10 @@
         
         NSData *data = UIImagePNGRepresentation(image);
         
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        hud.mode = MBProgressHUDAnimationFade;
+        hud.labelText = @"Sharing";
+        
         [facebookRequest addMultipartData:data
                                  withName:@"media"
                                      type:@"multipart/form-data"
@@ -77,8 +82,21 @@
         facebookRequest.account = [LMData sharedData].facebookAccount;
         
         [facebookRequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
+            __block UIImageView *imageView;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                UIImage *image = [UIImage imageNamed:@"checkmark.png"];
+                imageView = [[UIImageView alloc] initWithImage:image];
+                hud.customView = imageView;
+                hud.mode = MBProgressHUDModeCustomView;
+                hud.labelText = @"Completed";
+                sleep(0.5);
+                [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+            });
+            
+            
             if (!error) {
                 NSLog(@"Post successful!");
+
             } else {
                 
             }
