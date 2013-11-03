@@ -281,9 +281,9 @@
         NSLog( @"is in draw full path" );
         MKPolyline *route = overlay;
         MKPolylineRenderer *routeRenderer = [[MKPolylineRenderer alloc] initWithPolyline:route];
-        routeRenderer.strokeColor = [UIColor blueColor];
-        routeRenderer.fillColor = [UIColor blueColor];
-        routeRenderer.lineWidth = 6;
+        routeRenderer.strokeColor = [UIColor colorWithRed:0 green:174.0/255.0 blue:239.0/255.0 alpha:0.65];
+        routeRenderer.fillColor = [UIColor colorWithRed:0 green:174.0/255.0 blue:239.0/255.0 alpha:0.65];
+        routeRenderer.lineWidth = 5;
         return  routeRenderer;
         
     }
@@ -292,8 +292,8 @@
         NSLog(@"in draw ran path");
         MKPolyline *drawRoute = overlay;
         MKPolylineRenderer *routeRenderer = [[MKPolylineRenderer alloc]initWithPolyline:drawRoute];
-        routeRenderer.strokeColor = [UIColor redColor];
-        routeRenderer.fillColor = [UIColor redColor];
+        routeRenderer.strokeColor = [UIColor colorWithRed:1 green:0 blue:0 alpha:0.65];
+        routeRenderer.fillColor = [UIColor colorWithRed:1 green:0 blue:0 alpha:0.65];
         routeRenderer.lineWidth = 4;
         return routeRenderer;
         
