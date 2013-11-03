@@ -43,10 +43,8 @@
     //test
     //NSLog(@"the previous lat before anything %f", self.previousLocation.coordinate.latitude);
     //NSLog(@"the previous lon before anything %f", self.previousLocation.coordinate.longitude);
-    
     //init views
     
-
     [LMData sharedData].mapView = [LMData sharedData].mapView;
     [LMData sharedData].mapView.frame = CGRectMake(0, 0, 320, 568);
     [self.view addSubview:[LMData sharedData].mapView];
@@ -54,7 +52,6 @@
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance( [[CLLocation alloc] initWithLatitude:25.083269261833557 longitude:121.58102095127106].coordinate, 700, 700);
     
     [[LMData sharedData].mapView setRegion:region animated:NO];
-    
     [LMData sharedData].mapView.delegate = self;
     [[LMData sharedData].mapView setNeedsDisplay];
     [LMData sharedData].mapView.showsUserLocation = YES;
@@ -278,7 +275,7 @@
     
     if([overlay isKindOfClass:[MKPolyline class]] && self.drawRoute == YES){
         self.drawRoute = NO;
-        NSLog( @"is in draw full path" );
+        //NSLog( @"is in draw full path" );
         MKPolyline *route = overlay;
         MKPolylineRenderer *routeRenderer = [[MKPolylineRenderer alloc] initWithPolyline:route];
         routeRenderer.strokeColor = [UIColor colorWithRed:0 green:174.0/255.0 blue:239.0/255.0 alpha:0.65];

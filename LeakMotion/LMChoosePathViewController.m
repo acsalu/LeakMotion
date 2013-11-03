@@ -77,10 +77,8 @@
     }
     
     //NSLog(@"the button value Array = %@", [(UIButton*)_pathButtonsArray[0] getValue:@"dataArray"]);
-    
-    
-//    self.startRunningButton.layer.backgroundColor = [[UIColor greenColor] CGColor];
-//    self.startRunningButton.layer.cornerRadius = 3;
+    //self.startRunningButton.layer.backgroundColor = [[UIColor greenColor] CGColor];
+    //self.startRunningButton.layer.cornerRadius = 3;
 
     _startRunningButton.buttonColor = [LMData transparentWhiteColor];
     _startRunningButton.shadowColor = [UIColor greenColor];
@@ -90,7 +88,6 @@
     [_startRunningButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
     [_startRunningButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
     
-    
     _globalCounterForAnimationTimer = 0;
     //self.mapView = [LMData sharedData].mapView;
     
@@ -98,11 +95,6 @@
     [LMData sharedData].mapView.delegate = self;
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance( [[CLLocation alloc] initWithLatitude:25.057726 longitude:121.614629].coordinate, 500, 500);
     [[[LMData sharedData]mapView] setRegion:region];
-
-
-    
-    
-    
     
 }
 

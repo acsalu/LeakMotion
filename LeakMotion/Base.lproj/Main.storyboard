@@ -173,7 +173,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HLF-Wx-h3I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-595" y="834"/>
+            <point key="canvasLocation" x="-727" y="826"/>
         </scene>
         <!--Choose Path View Controller - Choose Path-->
         <scene sceneID="5qO-kq-M8C">
@@ -228,7 +228,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4GE-fu-abL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-39" y="841"/>
+            <point key="canvasLocation" x="-253" y="826"/>
         </scene>
         <!--Show Route View Controller - Start Running-->
         <scene sceneID="dYM-e9-50g">
@@ -305,7 +305,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BdL-Ga-YPc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="474" y="841"/>
+            <point key="canvasLocation" x="194" y="826"/>
         </scene>
         <!--Result View Controller - Result-->
         <scene sceneID="sE9-v6-Ra8">
@@ -353,11 +353,12 @@
                     <connections>
                         <outlet property="doneButton" destination="S0c-C8-SbB" id="kJM-dm-S6g"/>
                         <outlet property="facebookShareButton" destination="iqb-pC-fxu" id="bBg-pI-kSX"/>
+                        <segue destination="R7p-x8-hXj" kind="modal" id="HL0-6s-2Mj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="okd-6r-OHe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="964" y="834"/>
+            <point key="canvasLocation" x="682" y="818"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="Lg1-tK-Jip">
@@ -428,6 +429,85 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9MR-eK-d0y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1121" y="834"/>
+        </scene>
+        <!--Lobby View Controller-->
+        <scene sceneID="fKC-Gc-MlY">
+            <objects>
+                <viewController id="R7p-x8-hXj" customClass="LMLobbyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lN8-U7-vXE"/>
+                        <viewControllerLayoutGuide type="bottom" id="7YR-SE-0uP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hhd-7O-tZk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cGk-Rg-nF3">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FeX-N5-5BT">
+                                        <rect key="frame" x="54" y="210" width="212" height="218"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1m8-WB-g5V" customClass="FUIButton">
+                                        <rect key="frame" x="30" y="496" width="260" height="52"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="  Run fun things" image="sneaker-icon">
+                                            <color key="titleColor" red="0.99607843139999996" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.75707116789999995" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="53d-X7-A6f">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="178"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kenny Sung" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOj-Nl-fNo">
+                                        <rect key="frame" x="136" y="36" width="132" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mileage-icon" translatesAutoresizingMaskIntoConstraints="NO" id="qFk-mG-Hyy">
+                                        <rect key="frame" x="139" y="104" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="timer-icon" translatesAutoresizingMaskIntoConstraints="NO" id="Ajc-E5-BNl">
+                                        <rect key="frame" x="139" y="131" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sneaker-icon" translatesAutoresizingMaskIntoConstraints="NO" id="mfj-LQ-wb6">
+                                        <rect key="frame" x="140" y="76" width="19" height="19"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oiB-rO-QcQ">
+                                        <rect key="frame" x="216" y="131" width="0.0" height="0.0"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nWn-Ny-jGM"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="mapDemoView" destination="FeX-N5-5BT" id="SDb-aZ-Vfr"/>
+                        <outlet property="pickPathButton" destination="1m8-WB-g5V" id="6SP-AA-3R7"/>
+                        <outlet property="profileView" destination="53d-X7-A6f" id="1ez-7l-Xef"/>
+                        <outlet property="userNameLabel" destination="gOj-Nl-fNo" id="MoY-W3-rFq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J31-Lb-IGY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1159" y="818"/>
         </scene>
     </scenes>
     <resources>
