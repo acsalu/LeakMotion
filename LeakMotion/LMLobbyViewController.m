@@ -51,7 +51,7 @@
 {
     [super viewWillAppear:animated];
     [LMData sharedData].delegate = self;
-//    [[LMData sharedData] facebook];
+    [[LMData sharedData] facebook];
     [self showProfilePic];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.f target:self selector:@selector(presentMapDemo) userInfo:nil repeats:YES];
 }
@@ -76,7 +76,7 @@
 {
     AGMedallionView *medallionView = [[AGMedallionView alloc] init];
     medallionView.image = [UIImage imageNamed:@"profile-pic"];
-    medallionView.center = CGPointMake(80, 110);
+    medallionView.center = CGPointMake(85, 113);
     medallionView.frame = CGRectMake(medallionView.frame.origin.x, medallionView.frame.origin.y, 110, 110);
     [self.view addSubview:medallionView];
 }
