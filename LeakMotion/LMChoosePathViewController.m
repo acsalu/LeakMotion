@@ -94,7 +94,7 @@
     _globalCounterForAnimationTimer = 0;
     //self.mapView = [LMData sharedData].mapView;
     
-    [self.view addSubview:[LMData sharedData].mapView];
+    [self.view insertSubview:[LMData sharedData].mapView belowSubview:self.startRunningButton];
     [LMData sharedData].mapView.delegate = self;
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance( [[CLLocation alloc] initWithLatitude:40.1487 longitude:-102.89].coordinate, 5000, 5000);
     [[[LMData sharedData]mapView] setRegion:region];
