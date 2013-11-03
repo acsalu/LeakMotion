@@ -51,7 +51,7 @@
     [LMData sharedData].mapView.frame = CGRectMake(0, 0, 320, 568);
     [self.view addSubview:[LMData sharedData].mapView];
     
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance( [[CLLocation alloc] initWithLatitude:25.057686 longitude:121.614532].coordinate, 100000, 100000);
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance( [[CLLocation alloc] initWithLatitude:25.083269261833557 longitude:121.58102095127106].coordinate, 700, 700);
     
     [[LMData sharedData].mapView setRegion:region animated:NO];
     

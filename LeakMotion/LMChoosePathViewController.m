@@ -38,17 +38,17 @@
     self.dismissButton.layer.borderColor = [[UIColor colorWithRed:0 green:122/255.0 blue:255/255.0 alpha:1.0f] CGColor];
 
     _pathsScroll = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 405, 320, 78)];
-    [_pathsScroll setContentSize:CGSizeMake(7 * 70 + 6 * 8, 78)];
+    [_pathsScroll setContentSize:CGSizeMake(5 * 70 + 4 * 8, 78)];
     [_pathsScroll setAlwaysBounceVertical:NO];
     [_pathsScroll setShowsHorizontalScrollIndicator:NO];
     [self.view addSubview:_pathsScroll];
     
-    NSMutableArray *fileNamesArray = [[NSMutableArray alloc]initWithCapacity:7];
-    for (int i = 0; i < 7; i++) {
+    NSMutableArray *fileNamesArray = [[NSMutableArray alloc]initWithCapacity:5];
+    for (int i = 0; i < 5; i++) {
         fileNamesArray[i] = [NSString stringWithFormat:@"path-heart-%i", i+1];
     }
     
-    _pathButtonsArray = [[NSMutableArray alloc] initWithCapacity:7];
+    _pathButtonsArray = [[NSMutableArray alloc] initWithCapacity:5];
     
     //test data
     NSString *dataString = @"[[25.082994755492088, 121.58237814903259], [25.0832571155483, 121.58102631568909], [25.081838421136208, 121.58114433288574], [25.07980752175368, 121.58273220062256], [25.08092500644412, 121.58591866493225], [25.081916158242098, 121.58597230911255], [25.08205219805865, 121.5845239162445], [25.08161492668174, 121.58316135406494]]";
@@ -60,7 +60,7 @@
     NSLog(@"length = %d",[[self getAnimationCoordinatesWith:dataArray] count]);
     
     
-    for (int i = 0; i < 7; i++) {
+    for (int i = 0; i < 5; i++) {
         
         //fake the data Array
         _datasArray[i] = dataArray;
