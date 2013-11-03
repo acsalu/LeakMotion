@@ -11,6 +11,7 @@
 #import <MapKit/MapKit.h>
 
 @class FUIButton;
+@class LMDrawShapeView;
 
 @interface LMChoosePathViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
 
@@ -36,6 +37,11 @@
 //fucking animation on the map 2, by costing a lot of storage...well, not htat much = =
 @property (nonatomic) int animationIndex;
 @property (strong, nonatomic) NSMutableArray *animationData;
+
+
+
+@property (strong, nonatomic) FUIButton *submitButton;
+@property (strong, nonatomic) LMDrawShapeView *canvas;
 
 - (IBAction)showPath:(id)sender;
 - (IBAction)backToLobby:(id)sender;

@@ -11,6 +11,7 @@
 #import "FlatUIKit.h"
 #import <QuartzCore/QuartzCore.h>
 #import "LMData.h"
+#import "LMDrawShapeView.h"
 
 @interface LMChoosePathViewController ()
 
@@ -38,17 +39,17 @@
     self.dismissButton.layer.borderColor = [[UIColor colorWithRed:0 green:122/255.0 blue:255/255.0 alpha:1.0f] CGColor];
 
     _pathsScroll = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 405, 320, 78)];
-    [_pathsScroll setContentSize:CGSizeMake(7 * 70 + 6 * 8, 78)];
+    [_pathsScroll setContentSize:CGSizeMake(5 * 70 + 4 * 8, 78)];
     [_pathsScroll setAlwaysBounceVertical:NO];
     [_pathsScroll setShowsHorizontalScrollIndicator:NO];
     [self.view addSubview:_pathsScroll];
     
-    NSMutableArray *fileNamesArray = [[NSMutableArray alloc]initWithCapacity:7];
-    for (int i = 0; i < 7; i++) {
+    NSMutableArray *fileNamesArray = [[NSMutableArray alloc]initWithCapacity:5];
+    for (int i = 0; i < 5; i++) {
         fileNamesArray[i] = [NSString stringWithFormat:@"path-heart-%i", i+1];
     }
     
-    _pathButtonsArray = [[NSMutableArray alloc] initWithCapacity:7];
+    _pathButtonsArray = [[NSMutableArray alloc] initWithCapacity:5];
     
     //test data
     NSString *dataString = @"[[25.082994755492088, 121.58237814903259], [25.0832571155483, 121.58102631568909], [25.081838421136208, 121.58114433288574], [25.07980752175368, 121.58273220062256], [25.08092500644412, 121.58591866493225], [25.081916158242098, 121.58597230911255], [25.08205219805865, 121.5845239162445], [25.08161492668174, 121.58316135406494]]";
@@ -60,7 +61,7 @@
     NSLog(@"length = %d",[[self getAnimationCoordinatesWith:dataArray] count]);
     
     
-    for (int i = 0; i < 7; i++) {
+    for (int i = 0; i < 5; i++) {
         
         //fake the data Array
         _datasArray[i] = dataArray;
@@ -223,38 +224,66 @@
 
 - (void) pathButtonPressed: (UIButton*)sender{
     
-    /*
-    NSArray *edges = _datasArray[sender.tag];
+    if (sender.tag == 4) {
+        NSLog(@"show canvas");
+        _canvas = [[LMDrawShapeView alloc] initWithFrame:CGRectMake(0, 100, 320, 500)];
+        _canvas.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.7f];
+        
+        
+        _submitButton = [[FUIButton alloc] initWithFrame:CGRectMake(230, 110, 80, 40)];
+        
+        _submitButton.buttonColor = [LMData redColor];
+        _submitButton.shadowColor = [UIColor greenColor];
+        _submitButton.shadowHeight = 0.0f;
+        _submitButton.cornerRadius = 6.0f;
+        _submitButton.titleLabel.font = [UIFont boldFlatFontOfSize:16];
+        [_submitButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
+        [_submitButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
+        
+        [_submitButton setTitle:@"Submit" forState:UIControlStateNormal];
+        [_submitButton addTarget:self action:@selector(showYahoo:) forControlEvents:UIControlEventTouchUpInside];
+        
+        
+        
+        [self.view addSubview:_canvas];
+        [self.view addSubview:_submitButton];
+        
+    } else if (sender.tag == 0) {
+        _globalCounterForAnimationTimer = @(0);
+        _animationIndex = 0;
+        CLLocationCoordinate2D startCoord = CLLocationCoordinate2DMake(25.081176, 121.583244);
+        MKCoordinateRegion adjustRegion = [[[LMData sharedData]mapView] regionThatFits:MKCoordinateRegionMakeWithDistance(startCoord, 590, 590)];
+        [[[LMData sharedData] mapView] setRegion:adjustRegion animated:YES];
+        
+        NSString *dataString = @"[[25.082994755492088, 121.58237814903259], [25.0832571155483, 121.58102631568909], [25.081838421136208, 121.58114433288574], [25.07980752175368, 121.58273220062256], [25.08092500644412, 121.58591866493225], [25.081916158242098, 121.58597230911255], [25.08205219805865, 121.5845239162445], [25.08161492668174, 121.58316135406494]]";
+        NSData *data = [dataString dataUsingEncoding:NSUTF8StringEncoding];
+        NSError *e;
+        NSArray *dataArray = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&e];
+        _animationData = [self getAnimationCoordinatesWith:dataArray];
+        _timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(timerFunctionWith) userInfo:@{@"animationData": _animationData} repeats:YES];
+    } else if (sender.tag == 2) {
+        _globalCounterForAnimationTimer = @(0);
+        _animationIndex = 0;
+        CLLocationCoordinate2D startCoord = CLLocationCoordinate2DMake(25.05120034683183, 121.54756539583206);
+        MKCoordinateRegion adjustRegion = [[[LMData sharedData]mapView] regionThatFits:MKCoordinateRegionMakeWithDistance(startCoord, 1500, 1500)];
+        [[[LMData sharedData] mapView] setRegion:adjustRegion animated:YES];
+        
+        NSString *dataString = @"[[25.053237534776805, 121.54523491859436], [25.057999953358358, 121.54916167259216], [25.053801259285088, 121.54922604560852], [25.053721074491644, 121.55288189649582], [25.053348093020514, 121.55289933085442], [25.053330476603758, 121.55268609523773], [25.04820034683183, 121.55256539583206], [25.048246515919715, 121.5446662902832], [25.049288960697105, 121.54469177126884], [25.04928167090427, 121.54397428035736], [25.04987943247778, 121.54401183128357], [25.049894011991945, 121.5434217453003], [25.048217356497805, 121.54337882995605], [25.048295114940814, 121.54042303562164], [25.054651700835493, 121.54050886631012], [25.05456908677222, 121.54350221157074], [25.053286131819295, 121.54349684715271]]";
+        NSData *data = [dataString dataUsingEncoding:NSUTF8StringEncoding];
+        NSError *e;
+        NSArray *dataArray = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&e];
+        _animationData = [self getAnimationCoordinatesWith:dataArray];
+        _timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(timerFunctionWith) userInfo:@{@"animationData": _animationData} repeats:YES];
+    }
+}
+
+- (void)showYahoo:(id)sender
+{
+    [_submitButton removeFromSuperview];
+    [_canvas removeFromSuperview];
     
-    //NSInteger index = [sender tag];
-    //NSArray *dataArray = _datasArray[index];
-    //[self draw:dataArray with:0.8];
-    //test loc1 and loc2;
-    CLLocation *loc1 = [[CLLogitcation alloc] initWithLatitude:40.148767 longitude:-102.919922];
-    CLLocation *loc2 = [[CLLocation alloc] initWithLatitude:40.076627 longitude:-101.876221];
-    //[self animatePathOnMapWith:loc1 and:loc2];
     
-    _startLoc = loc1;
-    _dLat = (loc2.coordinate.latitude - loc1.coordinate.latitude)/100;
-    _dLon = (loc2.coordinate.longitude - loc1.coordinate.longitude)/100;
-    NSLog(@"_dLat = %f", _dLat);
-    NSLog(@"_dLon = %f", _dLon);
-    _endLoc = [[CLLocation alloc] initWithLatitude:(loc1.coordinate.latitude + _dLat) longitude:(loc1.coordinate.longitude + _dLon)];
-    _globalCounterForAnimationTimer = 0;
     
-    _timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerFunctionToDrawPath) userInfo:Nil repeats:YES];
-    */
-    
-    CLLocationCoordinate2D startCoord = CLLocationCoordinate2DMake(25.081176, 121.583244);
-    MKCoordinateRegion adjustRegion = [[[LMData sharedData]mapView] regionThatFits:MKCoordinateRegionMakeWithDistance(startCoord, 590, 590)];
-    [[[LMData sharedData] mapView] setRegion:adjustRegion animated:YES];
-    
-    NSString *dataString = @"[[25.082994755492088, 121.58237814903259], [25.0832571155483, 121.58102631568909], [25.081838421136208, 121.58114433288574], [25.07980752175368, 121.58273220062256], [25.08092500644412, 121.58591866493225], [25.081916158242098, 121.58597230911255], [25.08205219805865, 121.5845239162445], [25.08161492668174, 121.58316135406494]]";
-    NSData *data = [dataString dataUsingEncoding:NSUTF8StringEncoding];
-    NSError *e;
-    NSArray *dataArray = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&e];
-    _animationData = [self getAnimationCoordinatesWith:dataArray];
-    _timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(timerFunctionWith) userInfo:@{@"animationData": _animationData} repeats:YES];
     
 }
 
