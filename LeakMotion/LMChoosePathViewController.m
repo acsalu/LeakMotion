@@ -28,7 +28,7 @@
     
     self.view.backgroundColor = [LMData redColor];
     
-    
+    _oneOfTheButtonIsPressed = YES;
 	self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
     [self.locationManager startUpdatingLocation];
@@ -96,7 +96,7 @@
     
     [self.view insertSubview:[LMData sharedData].mapView belowSubview:self.startRunningButton];
     [LMData sharedData].mapView.delegate = self;
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance( [[CLLocation alloc] initWithLatitude:40.1487 longitude:-102.89].coordinate, 5000, 5000);
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance( [[CLLocation alloc] initWithLatitude:25.057726 longitude:121.614629].coordinate, 500, 500);
     [[[LMData sharedData]mapView] setRegion:region];
 
 
@@ -146,17 +146,14 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
     
-    /*
-    CLLocation *location = locations[0];
+    CLLocation *location = [locations lastObject];
     self.currentCoordinate = location.coordinate;
-    
-    NSLog(@"current location: (%.4f, %.4f)", self.currentCoordinate.latitude, self.currentCoordinate.longitude);
-    
-    MKCoordinateRegion region = [self.mapView regionThatFits:MKCoordinateRegionMakeWithDistance(self.currentCoordinate, 800, 800)];
-    
-    [self.mapView setRegion:region animated:YES];
-     */
-     
+    //NSLog(@"current location: (%.4f, %.4f)", self.currentCoordinate.latitude, self.currentCoordinate.longitude);
+    MKCoordinateRegion region = [[[LMData sharedData]mapView] regionThatFits:MKCoordinateRegionMakeWithDistance(self.currentCoordinate, 800, 800)];
+    //[self.mapView setRegion:region animated:YES];
+    if ( !_oneOfTheButtonIsPressed ){
+        [[[LMData sharedData] mapView] setRegion:region animated:YES];
+    }
 }
 
 
@@ -350,7 +347,6 @@
 }
 
 - (void) animatePathOnMapWith:(CLLocation*) startPoint and:(CLLocation*) endPoint{
-    
     
     NSLog(@"in animatePath on map");
     float dLat = (endPoint.coordinate.latitude - startPoint.coordinate.latitude)/100;
