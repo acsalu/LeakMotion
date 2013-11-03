@@ -7,6 +7,7 @@
 //
 
 #import "LMResultViewController.h"
+#import "LMFakeLobby.h"
 #import "FlatUIKit.h"
 #import "LMData.h"
 #import <Social/Social.h>
@@ -112,6 +113,17 @@
 
 - (IBAction)backToLobby:(id)sender
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    //[self dismissViewControllerAnimated:YES completion:nil];
+    
 }
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    LMFakeLobby *fakeLobby = (LMFakeLobby*)segue.destinationViewController;
+    
+    
+}
+
+
+
 @end

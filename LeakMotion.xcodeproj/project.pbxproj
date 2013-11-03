@@ -83,6 +83,8 @@
 		90E04484181D4C5B006F3379 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 90E04482181D4C5B006F3379 /* InfoPlist.strings */; };
 		90E04486181D4C5B006F3379 /* LeakMotionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E04485181D4C5B006F3379 /* LeakMotionTests.m */; };
 		CA1B6F857BBB4B8DA2EBBE6B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0277BE28632549D09E549599 /* libPods.a */; };
+		EE4A81411825F6C600C702DA /* LMLobbyViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4A81401825F6C600C702DA /* LMLobbyViewController2.m */; };
+		EE4A81451825FA7900C702DA /* LMFakeLobby.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4A81441825FA7900C702DA /* LMFakeLobby.m */; };
 		EE6EE27E1824C5DF0092A6B1 /* LMShowRouteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6EE27D1824C5DF0092A6B1 /* LMShowRouteViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -229,6 +231,10 @@
 		90E04483181D4C5B006F3379 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		90E04485181D4C5B006F3379 /* LeakMotionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeakMotionTests.m; sourceTree = "<group>"; };
 		EE4A813E1825260000C702DA /* track.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = track.gpx; sourceTree = "<group>"; };
+		EE4A813F1825F6C600C702DA /* LMLobbyViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMLobbyViewController2.h; sourceTree = "<group>"; };
+		EE4A81401825F6C600C702DA /* LMLobbyViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMLobbyViewController2.m; sourceTree = "<group>"; };
+		EE4A81431825FA7900C702DA /* LMFakeLobby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LMFakeLobby.h; path = ../LMFakeLobby.h; sourceTree = "<group>"; };
+		EE4A81441825FA7900C702DA /* LMFakeLobby.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LMFakeLobby.m; path = ../LMFakeLobby.m; sourceTree = "<group>"; };
 		EE6EE27C1824C5DF0092A6B1 /* LMShowRouteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMShowRouteViewController.h; sourceTree = "<group>"; };
 		EE6EE27D1824C5DF0092A6B1 /* LMShowRouteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMShowRouteViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -449,6 +455,8 @@
 		90E04460181D4C5B006F3379 /* LeakMotion */ = {
 			isa = PBXGroup;
 			children = (
+				EE4A81431825FA7900C702DA /* LMFakeLobby.h */,
+				EE4A81441825FA7900C702DA /* LMFakeLobby.m */,
 				90E04469181D4C5B006F3379 /* LMAppDelegate.h */,
 				90E0446A181D4C5B006F3379 /* LMAppDelegate.m */,
 				90E0446C181D4C5B006F3379 /* Main.storyboard */,
@@ -469,6 +477,8 @@
 				EE6EE27D1824C5DF0092A6B1 /* LMShowRouteViewController.m */,
 				909EB6391824E693004EA734 /* Unused */,
 				90E04461181D4C5B006F3379 /* Supporting Files */,
+				EE4A813F1825F6C600C702DA /* LMLobbyViewController2.h */,
+				EE4A81401825F6C600C702DA /* LMLobbyViewController2.m */,
 			);
 			path = LeakMotion;
 			sourceTree = "<group>";
@@ -667,6 +677,7 @@
 				909EB6D51824F6DB004EA734 /* FUIButton.m in Sources */,
 				905D8AB01824BB2100ED4601 /* LMChoosePathViewController.m in Sources */,
 				909EB6DB1824F6DB004EA734 /* UIBarButtonItem+FlatUI.m in Sources */,
+				EE4A81411825F6C600C702DA /* LMLobbyViewController2.m in Sources */,
 				909EB6DA1824F6DB004EA734 /* FUITextField.m in Sources */,
 				909EB6A01824F655004EA734 /* AFSecurityPolicy.m in Sources */,
 				909EB6381824DE60004EA734 /* LMData.m in Sources */,
@@ -689,6 +700,7 @@
 				909EB6D61824F6DB004EA734 /* FUICellBackgroundView.m in Sources */,
 				909EB6DF1824F6DB004EA734 /* UINavigationBar+FlatUI.m in Sources */,
 				909EB6D71824F6DB004EA734 /* FUIPopoverBackgroundView.m in Sources */,
+				EE4A81451825FA7900C702DA /* LMFakeLobby.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

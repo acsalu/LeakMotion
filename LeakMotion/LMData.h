@@ -31,6 +31,10 @@
 @property (weak, nonatomic) id<LMDataDelegate> delegate;
 @property (strong, nonatomic) MKMapView *mapView;
 
+@property (nonatomic) float distance;
+@property (nonatomic) float averageSpeed;
+@property (nonatomic) float time;
+
 
 + (UIColor *)redColor;
 + (UIColor *)transparentWhiteColor;

@@ -312,6 +312,9 @@
 {
     if ([segue.identifier isEqualToString:@"ViewResult"]) {
         self.willDismiss = YES;
+        [LMData sharedData].averageSpeed = self.averageSpeed;
+        [LMData sharedData].distance = self.totalRanLength;
+        [LMData sharedData].time = CACurrentMediaTime() - _startTime;
     }
 }
 
