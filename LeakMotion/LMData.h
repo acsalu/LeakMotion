@@ -33,7 +33,7 @@
 
 
 + (UIColor *)redColor;
-
++ (UIColor *)transparentWhiteColor;
 
 + (LMData *)sharedData;
 - (void)facebook;
