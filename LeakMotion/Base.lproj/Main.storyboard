@@ -258,7 +258,7 @@
                         <outlet property="ranDistanceLabel" destination="cKK-a9-Zt4" id="5pC-dw-pxM"/>
                         <outlet property="timerIcon" destination="PfS-YO-I0x" id="JyI-7x-aiX"/>
                         <outlet property="timerLabel" destination="zta-MI-sdD" id="VNy-gX-K7M"/>
-                        <segue destination="O1j-7h-T7E" kind="modal" identifier="ViewResult" id="pQH-19-H8b"/>
+                        <segue destination="O1j-7h-T7E" kind="custom" identifier="ViewResult" customClass="LMCustomSegue" id="pQH-19-H8b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BdL-Ga-YPc" userLabel="First Responder" sceneMemberID="firstResponder"/>
