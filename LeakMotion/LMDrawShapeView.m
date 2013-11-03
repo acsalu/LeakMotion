@@ -12,50 +12,53 @@
 
 - (id)initWithFrame:(CGRect)frame
 {
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
+    if ((self = [super initWithFrame:frame])) {
+        _strokeColor = [UIColor whiteColor];
     }
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
-
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    self.path = [NSMutableArray arrayWithCapacity:100];
+    CGPoint point = [[touches allObjects][0] locationInView:self];
+    //    NSLog(@"touchesBegan at (%.2f, %.2f)", point.x, point.y);
     
-    UITouch *touch = [touches anyObject];
-    CGPoint touchPoint = [touch locationInView:self];
-    
-    [self.path addObject:[NSValue valueWithCGPoint:touchPoint]];
+    self.currentPath = [UIBezierPath bezierPath];
+    self.currentPath.lineWidth = 2.0f;
+    [self.currentPath moveToPoint:point];
+    [self.paths addObject:self.currentPath];
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    UITouch *touch = [touches anyObject];
-    CGPoint touchPoint = [touch locationInView:self];
+    CGPoint point = [[touches allObjects][0] locationInView:self];
+    //    NSLog(@"touchesMoved at (%.2f, %.2f)", point.x, point.y);
     
-    [self.path addObject:[NSValue valueWithCGPoint:touchPoint]];
+    [self.currentPath addLineToPoint:point];
+    [self setNeedsDisplay];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    UITouch *touch = [touches anyObject];
-    CGPoint touchPoint = [touch locationInView:self];
-    
-    [self.path addObject:[NSValue valueWithCGPoint:touchPoint]];
-    NSLog(@"%@", self.path);
-    
+    CGPoint point = [[touches allObjects][0] locationInView:self];
+    //    NSLog(@"touchesEnded at (%.2f, %.2f)", point.x, point.y);
+    [self invalidateIntrinsicContentSize];
 }
 
 
+- (void)drawRect:(CGRect)rect
+{
+    [_strokeColor set];
+    for (UIBezierPath *path in self.paths) [path stroke];
+}
+
+# pragma - mark accessor methods
+
+- (NSMutableArray *)paths
+{
+    // lazy instantiation
+    if (!_paths) _paths = [NSMutableArray array];
+    return _paths;
+}
 
 @end

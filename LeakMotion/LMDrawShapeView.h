@@ -10,6 +10,9 @@
 
 @interface LMDrawShapeView : UIView
 
-@property (strong, nonatomic) NSMutableArray *path;
+@property (nonatomic, strong) NSMutableArray *paths;
+@property (nonatomic, strong) UIBezierPath *currentPath;
+
+@property (nonatomic, strong) UIColor *strokeColor;
 
 @end
