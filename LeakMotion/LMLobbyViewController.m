@@ -29,7 +29,7 @@
     self.navigationController.navigationBarHidden = YES;
 	// Do any additional setup after loading the view.
     
-    _pickPathButton.buttonColor = [LMData redColor];
+    _pickPathButton.buttonColor = [LMData transparentWhiteColor];
     _pickPathButton.shadowColor = [UIColor greenColor];
     _pickPathButton.shadowHeight = 0.0f;
     _pickPathButton.cornerRadius = 6.0f;
@@ -38,11 +38,13 @@
     [_pickPathButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
     
     UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:self.profileView.bounds];
-    self.profileView.layer.masksToBounds = NO;
-    self.profileView.layer.shadowColor = [UIColor blackColor].CGColor;
-    self.profileView.layer.shadowOffset = CGSizeMake(0.0f, 0.5f);
-    self.profileView.layer.shadowOpacity = 0.1f;
-    self.profileView.layer.shadowPath = shadowPath.CGPath;
+//    self.profileView.layer.masksToBounds = NO;
+//    self.profileView.layer.shadowColor = [UIColor blackColor].CGColor;
+//    self.profileView.layer.shadowOffset = CGSizeMake(0.0f, 0.5f);
+//    self.profileView.layer.shadowOpacity = 0.1f;
+//    self.profileView.layer.shadowPath = shadowPath.CGPath;
+    
+    self.view.backgroundColor = [LMData redColor];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -74,7 +76,7 @@
 {
     AGMedallionView *medallionView = [[AGMedallionView alloc] init];
     medallionView.image = [UIImage imageNamed:@"profile-pic"];
-    medallionView.center = CGPointMake(80, 100);
+    medallionView.center = CGPointMake(80, 110);
     medallionView.frame = CGRectMake(medallionView.frame.origin.x, medallionView.frame.origin.y, 110, 110);
     [self.view addSubview:medallionView];
 }

@@ -23,6 +23,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+        self.view.backgroundColor = [LMData redColor];
 	
     _mapView = [LMData sharedData].mapView;
     _mapView.showsUserLocation = NO;
@@ -38,7 +39,7 @@
     [_facebookShareButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
     [_facebookShareButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
 
-    _doneButton.buttonColor = [UIColor redColor];
+    _doneButton.buttonColor = [LMData transparentWhiteColor];
     _doneButton.shadowColor = [UIColor greenColor];
     _doneButton.shadowHeight = 0.0f;
     _doneButton.cornerRadius = 6.0f;

@@ -25,6 +25,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [LMData redColor];
+    
+    
 	self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
     [self.locationManager startUpdatingLocation];
@@ -78,7 +82,7 @@
 //    self.startRunningButton.layer.backgroundColor = [[UIColor greenColor] CGColor];
 //    self.startRunningButton.layer.cornerRadius = 3;
 
-    _startRunningButton.buttonColor = [UIColor turquoiseColor];
+    _startRunningButton.buttonColor = [LMData transparentWhiteColor];
     _startRunningButton.shadowColor = [UIColor greenColor];
     _startRunningButton.shadowHeight = 0.0f;
     _startRunningButton.cornerRadius = 6.0f;
