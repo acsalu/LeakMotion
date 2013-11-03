@@ -23,6 +23,7 @@
 @property (strong, nonatomic) UIScrollView *pathsScroll;
 @property (strong, nonatomic) NSMutableArray *pathButtonsArray;
 @property (strong, nonatomic) NSMutableArray *datasArray;
+@property (nonatomic) BOOL oneOfTheButtonIsPressed;
 
 //fucking animation on the map
 @property (strong, nonatomic) NSTimer *timer;
